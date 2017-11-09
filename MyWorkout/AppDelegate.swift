@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        if Auth.auth().currentUser != nil{
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let mainTabViewController = storyboard.instantiateViewController(withIdentifier: "MainTabViewController") as! UITabBarController
+            let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
+            vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+            vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
+            let frame = UIScreen.main.bounds
+            self.window = UIWindow(frame: frame)
+            //vc1.view.frame = frame
+            self.window?.rootViewController = vc1 as UIViewController
+            self.window?.makeKeyAndVisible()
+        }
         return true
     }
 

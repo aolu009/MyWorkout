@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		800B9A8D4B89B2283822A74B /* Pods_MyWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACB80807719AE7D048AB897 /* Pods_MyWorkout.framework */; };
+		BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */; };
+		BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */; };
+		BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3211111FADD03A003F1B34 /* UserAccount.swift */; };
+		BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */; };
+		BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4892A81FAF0F770068D856 /* TrainViewController.swift */; };
+		BF4892AB1FAF0F770068D856 /* TrainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4892A91FAF0F770068D856 /* TrainViewController.xib */; };
 		BF55CCEA1FAC628600F14E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55CCE91FAC628600F14E7C /* SignUpViewController.swift */; };
 		BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55CCEB1FACB1B900F14E7C /* LoginViewModel.swift */; };
+		BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */; };
+		BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */; };
 		BF6B46B71FAC42FC00130FF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B46B61FAC42FC00130FF8 /* Default-568h@2x.png */; };
 		BF84960E1FAC313700487F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84960D1FAC313700487F45 /* AppDelegate.swift */; };
 		BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84960F1FAC313700487F45 /* LoginViewController.swift */; };
@@ -43,8 +51,16 @@
 /* Begin PBXFileReference section */
 		3EA63F05A4DE4FBCD5008364 /* Pods-MyWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		7CCD3EDE7031E772D61E414A /* Pods-MyWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout.release.xcconfig"; sourceTree = "<group>"; };
+		BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryViewController.xib; sourceTree = "<group>"; };
+		BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryViewController.swift; sourceTree = "<group>"; };
+		BF3211111FADD03A003F1B34 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		BF4892A81FAF0F770068D856 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
+		BF4892A91FAF0F770068D856 /* TrainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainViewController.xib; sourceTree = "<group>"; };
 		BF55CCE91FAC628600F14E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF55CCEB1FACB1B900F14E7C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingContainerViewController.swift; sourceTree = "<group>"; };
+		BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingContainerViewController.xib; sourceTree = "<group>"; };
 		BF6B46B61FAC42FC00130FF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF84960A1FAC313700487F45 /* MyWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84960D1FAC313700487F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +122,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF2C4DB11FB1C3F9004133C2 /* TrainViews */ = {
+			isa = PBXGroup;
+			children = (
+				BF4892A81FAF0F770068D856 /* TrainViewController.swift */,
+				BF4892A91FAF0F770068D856 /* TrainViewController.xib */,
+				BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */,
+				BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */,
+				BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */,
+				BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */,
+			);
+			path = TrainViews;
+			sourceTree = "<group>";
+		};
+		BF4892A61FAED5180068D856 /* LoginProcess */ = {
+			isa = PBXGroup;
+			children = (
+				BF84960F1FAC313700487F45 /* LoginViewController.swift */,
+				BF55CCE91FAC628600F14E7C /* SignUpViewController.swift */,
+			);
+			path = LoginProcess;
+			sourceTree = "<group>";
+		};
+		BF4892A71FAED5620068D856 /* LoginProcess */ = {
+			isa = PBXGroup;
+			children = (
+				BF55CCEB1FACB1B900F14E7C /* LoginViewModel.swift */,
+				BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */,
+			);
+			path = LoginProcess;
+			sourceTree = "<group>";
+		};
 		BF55CCE61FAC463500F14E7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF4892A61FAED5180068D856 /* LoginProcess */,
+				BF2C4DB11FB1C3F9004133C2 /* TrainViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,7 +165,7 @@
 		BF55CCE71FAC464800F14E7C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				BF55CCEB1FACB1B900F14E7C /* LoginViewModel.swift */,
+				BF4892A71FAED5620068D856 /* LoginProcess */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +173,7 @@
 		BF55CCE81FAC466000F14E7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF3211111FADD03A003F1B34 /* UserAccount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,8 +209,6 @@
 				BF8496141FAC313700487F45 /* Assets.xcassets */,
 				BF84960D1FAC313700487F45 /* AppDelegate.swift */,
 				BF84963F1FAC39A500487F45 /* StoryBoards */,
-				BF84960F1FAC313700487F45 /* LoginViewController.swift */,
-				BF55CCE91FAC628600F14E7C /* SignUpViewController.swift */,
 				BF55CCE81FAC466000F14E7C /* Models */,
 				BF55CCE71FAC464800F14E7C /* ViewModels */,
 				BF55CCE61FAC463500F14E7C /* Views */,
@@ -305,8 +353,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */,
 				BF8496181FAC313700487F45 /* LaunchScreen.storyboard in Resources */,
+				BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */,
 				BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */,
+				BF4892AB1FAF0F770068D856 /* TrainViewController.xib in Resources */,
 				BF8496151FAC313700487F45 /* Assets.xcassets in Resources */,
 				BF6B46B71FAC42FC00130FF8 /* Default-568h@2x.png in Resources */,
 				BF8496131FAC313700487F45 /* Login.storyboard in Resources */,
@@ -354,18 +405,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,8 +457,13 @@
 			files = (
 				BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */,
 				BF55CCEA1FAC628600F14E7C /* SignUpViewController.swift in Sources */,
+				BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */,
 				BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */,
+				BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */,
 				BF84960E1FAC313700487F45 /* AppDelegate.swift in Sources */,
+				BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */,
+				BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */,
+				BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

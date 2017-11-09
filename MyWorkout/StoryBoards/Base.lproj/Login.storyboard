@@ -88,6 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="Y8U-dS-CgU" id="Znm-DE-25Y"/>
+                        <outlet property="passwordTextfield" destination="J4W-KV-Hgq" id="6Uk-hk-qxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,6 +127,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpU-Xb-460">
                                 <rect key="frame" x="25" y="372" width="325" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="didTapSubmit:" destination="ELg-CS-9VN" eventType="touchUpInside" id="wNq-g0-SZu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-f1-Juz">
                                 <rect key="frame" x="25" y="617" width="325" height="30"/>
@@ -176,6 +180,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9d8-wh-rru"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextfield" destination="3BH-SO-0Ua" id="n0S-he-ij2"/>
+                        <outlet property="passwordTextfield" destination="l09-Jk-NR7" id="2m6-nR-4hm"/>
+                        <outlet property="secndpasswordTextfield" destination="cX7-E0-l98" id="9zj-4s-ibX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIr-MN-Avh" sceneMemberID="firstResponder"/>
             </objects>
