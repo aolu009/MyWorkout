@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 class TrainViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var trainNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,8 +61,6 @@ class TrainViewController: UIViewController {
     func initController() {
         let nib = UINib(nibName: "TrainViewController", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
-        
-        //        captureImageView.contentMode = UIViewContentMode.scaleAspectFill
-        //        captureImageView.clipsToBounds = true
+        self.trainNameLabel.reactive.text <~ Bluetooth.manage.heartRate.signal
     }
 }

@@ -4,7 +4,7 @@
 //
 //  Created by Lu Ao on 11/3/17.
 //  Copyright © 2017 Lu Ao. All rights reserved.
-//
+// TODO: Clean up code for initiating VC
 
 import UIKit
 import FirebaseCore
@@ -18,15 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        let _ = Bluetooth.manage
         if Auth.auth().currentUser != nil{
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let mainTabViewController = storyboard.instantiateViewController(withIdentifier: "MainTabViewController") as! UITabBarController
             let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
             vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
             vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
-            let frame = UIScreen.main.bounds
-            self.window = UIWindow(frame: frame)
-            //vc1.view.frame = frame
+            // TODO: Check if below needs to be deleted.
+//            let frame = UIScreen.main.bounds
+//            self.window = UIWindow(frame: frame)
             self.window?.rootViewController = vc1 as UIViewController
             self.window?.makeKeyAndVisible()
         }
