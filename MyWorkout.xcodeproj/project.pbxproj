@@ -11,6 +11,9 @@
 		BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */; };
 		BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */; };
 		BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */; };
+		BF2C4DBA1FB70A5B004133C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8496141FAC313700487F45 /* Assets.xcassets */; };
+		BF2C4DBB1FB70AA1004133C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8496191FAC313700487F45 /* Info.plist */; };
+		BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */; };
 		BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3211111FADD03A003F1B34 /* UserAccount.swift */; };
 		BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */; };
 		BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4892A81FAF0F770068D856 /* TrainViewController.swift */; };
@@ -19,11 +22,9 @@
 		BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55CCEB1FACB1B900F14E7C /* LoginViewModel.swift */; };
 		BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */; };
 		BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */; };
-		BF6B46B71FAC42FC00130FF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B46B61FAC42FC00130FF8 /* Default-568h@2x.png */; };
 		BF84960E1FAC313700487F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84960D1FAC313700487F45 /* AppDelegate.swift */; };
 		BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84960F1FAC313700487F45 /* LoginViewController.swift */; };
 		BF8496131FAC313700487F45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8496111FAC313700487F45 /* Login.storyboard */; };
-		BF8496151FAC313700487F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8496141FAC313700487F45 /* Assets.xcassets */; };
 		BF8496181FAC313700487F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8496161FAC313700487F45 /* LaunchScreen.storyboard */; };
 		BF8496231FAC313700487F45 /* MyWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8496221FAC313700487F45 /* MyWorkoutTests.swift */; };
 		BF84962E1FAC313700487F45 /* MyWorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84962D1FAC313700487F45 /* MyWorkoutUITests.swift */; };
@@ -55,6 +56,7 @@
 		BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryViewController.xib; sourceTree = "<group>"; };
 		BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryViewController.swift; sourceTree = "<group>"; };
 		BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		BF3211111FADD03A003F1B34 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BF4892A81FAF0F770068D856 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +65,6 @@
 		BF55CCEB1FACB1B900F14E7C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingContainerViewController.swift; sourceTree = "<group>"; };
 		BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingContainerViewController.xib; sourceTree = "<group>"; };
-		BF6B46B61FAC42FC00130FF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF84960A1FAC313700487F45 /* MyWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84960D1FAC313700487F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF84960F1FAC313700487F45 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +138,14 @@
 			path = TrainViews;
 			sourceTree = "<group>";
 		};
+		BF2C4DBE1FB70C1A004133C2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		BF4892A61FAED5180068D856 /* LoginProcess */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +193,6 @@
 		BF8496011FAC313700487F45 = {
 			isa = PBXGroup;
 			children = (
-				BF6B46B61FAC42FC00130FF8 /* Default-568h@2x.png */,
 				BF84960C1FAC313700487F45 /* MyWorkout */,
 				BF8496211FAC313700487F45 /* MyWorkoutTests */,
 				BF84962C1FAC313700487F45 /* MyWorkoutUITests */,
@@ -210,6 +218,7 @@
 				BF8496191FAC313700487F45 /* Info.plist */,
 				BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */,
 				BF8496141FAC313700487F45 /* Assets.xcassets */,
+				BF2C4DBE1FB70C1A004133C2 /* Images */,
 				BF84960D1FAC313700487F45 /* AppDelegate.swift */,
 				BF84963F1FAC39A500487F45 /* StoryBoards */,
 				BF55CCE81FAC466000F14E7C /* Models */,
@@ -356,13 +365,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2C4DBB1FB70AA1004133C2 /* Info.plist in Resources */,
 				BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */,
 				BF8496181FAC313700487F45 /* LaunchScreen.storyboard in Resources */,
 				BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */,
 				BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */,
+				BF2C4DBA1FB70A5B004133C2 /* Assets.xcassets in Resources */,
+				BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */,
 				BF4892AB1FAF0F770068D856 /* TrainViewController.xib in Resources */,
-				BF8496151FAC313700487F45 /* Assets.xcassets in Resources */,
-				BF6B46B71FAC42FC00130FF8 /* Default-568h@2x.png in Resources */,
 				BF8496131FAC313700487F45 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +644,7 @@
 			baseConfigurationReference = 3EA63F05A4DE4FBCD5008364 /* Pods-MyWorkout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JC68KFVHSJ;
 				INFOPLIST_FILE = MyWorkout/Info.plist;
@@ -641,7 +652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.op.MyWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -650,6 +661,7 @@
 			baseConfigurationReference = 7CCD3EDE7031E772D61E414A /* Pods-MyWorkout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JC68KFVHSJ;
 				INFOPLIST_FILE = MyWorkout/Info.plist;
@@ -657,7 +669,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.op.MyWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
