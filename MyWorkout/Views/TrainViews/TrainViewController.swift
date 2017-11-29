@@ -23,28 +23,41 @@ class TrainViewController: UIViewController,UIGestureRecognizerDelegate {
     var newButtonA: UIButton!
     var newButtonB: UIButton!
     
-    var newCenter =  CGPoint()
+    private (set) var trainingTypeButtonLeft: UIButton!
+    private (set) var trainingTypeButtonMid: UIButton!
+    private (set) var trainingTypeButtonRight: UIButton!
     
-    
-    // TODO: Replace with viewModel data
-    var buttonTitle = ["1","2","3","4"]
+    //Train Button related UI Info
     private (set) var trainTypeOptionIdx = 0
+    private (set) var newCenter =  CGPoint()
     
-    var panOnTrainTypeButton: UIPanGestureRecognizer!
+    private (set) var trainingTypeButtonLeftCenter =  CGPoint()
+    private (set) var trainingTypeButtonMidCenter =  CGPoint()
+    private (set) var trainingTypeButtonRightCenter =  CGPoint()
+    
+    
+    //TODO: Replace with viewModel data
+    var buttonTitle = ["1","2","3","4"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
+        // Circlize all button and place them in the right place after base layout is done
+        //setupButtons()
+        trainingTypeButtonMidCenter = view.center
+        trainingTypeButtonLeftCenter = CGPoint(x: -self.view.frame.width/2, y: view.center.y)
+        trainingTypeButtonRightCenter = CGPoint(x: 3 * self.view.frame.width/2, y: view.center.y)
+        trainingTypeButtonMid.center = trainingTypeButtonMidCenter
+        trainingTypeButtonLeft.center = trainingTypeButtonLeftCenter
+        trainingTypeButtonRight.center = trainingTypeButtonRightCenter
         
         self.newButtonA.center = self.view.center
         self.newButtonB.center = self.view.center
-        //self.newButtonC.center = self.view.center
-        
-        
         self.newButtonB.center.x = self.view.frame.width + self.newButtonB.frame.width/2
-        //self.newButtonC.center.x = -self.newButtonC.frame.width/2
+        
         
         
         self.addTrainingButton.layer.cornerRadius = 0.5 * self.addTrainingButton.frame.width
@@ -69,49 +82,42 @@ class TrainViewController: UIViewController,UIGestureRecognizerDelegate {
         
         let originalCenter = self.view.center
         
-        let newCenterR = CGPoint(x: 3 * self.view.frame.width/2, y: originalCenter.y)//(self.view.frame.width/2 - self.trainingTypeButton.frame.width/2)
+        let newCenterR = CGPoint(x: 3 * self.view.frame.width/2, y: originalCenter.y)
         let newCenterL = CGPoint(x: -self.view.frame.width/2, y: originalCenter.y)
         
         
-        var angleRotate: CGFloat! = 0.0
+        let angleRotate: CGFloat! = 4 * 3.14 * (translation.x/self.view.frame.width)
         
         if gesture.state == .began{
             if velocity.x < 0{
                 self.newCenter = newCenterR
                 if trainTypeOptionIdx < buttonTitle.count - 1{
-                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame)
+                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[self.trainTypeOptionIdx + 1])
                     self.newButtonB.center = newCenterR
-                    self.newButtonB.setTitle(self.buttonTitle[self.trainTypeOptionIdx + 1], for: .normal)
                     self.newButtonB.isHidden = false
                     view.addSubview(self.newButtonB)
-                    print(newCenter,newCenterR)
                 }else{
-                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame)
+                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[self.trainTypeOptionIdx])
                     self.newButtonB.center = newCenterR
-                    self.newButtonB.setTitle(self.buttonTitle[self.trainTypeOptionIdx], for: .normal)
                     self.newButtonB.isHidden = true
                     view.addSubview(self.newButtonB)
-                    
                 }
                 
             }else if velocity.x > 0{
                 self.newCenter = newCenterL
                 if trainTypeOptionIdx > 0{
-                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame)
+                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[self.trainTypeOptionIdx - 1])
                     self.newButtonB.center = newCenterL
-                    self.newButtonB.setTitle(self.buttonTitle[self.trainTypeOptionIdx - 1], for: .normal)
                     self.newButtonB.isHidden = false
                     view.addSubview(self.newButtonB)
                 }else{
-                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame)
+                    self.newButtonB = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[self.trainTypeOptionIdx])
                     self.newButtonB.center = newCenterL
-                    self.newButtonB.setTitle(self.buttonTitle[self.trainTypeOptionIdx], for: .normal)
                     self.newButtonB.isHidden = true
                     view.addSubview(self.newButtonB)
                 }
             }
         }else if gesture.state == .changed{
-            angleRotate = 4 * 3.14 * (translation.x/self.view.frame.width)
             
             if velocity.x < 0{
                 if trainTypeOptionIdx < buttonTitle.count - 1{
@@ -146,7 +152,7 @@ class TrainViewController: UIViewController,UIGestureRecognizerDelegate {
             if velocity.x < 0{
                 if trainTypeOptionIdx < buttonTitle.count - 1 && self.newButtonA.center.x < view.frame.width/5{
                     UIView.animate(withDuration: 0.5, animations: {
-                        self.newButtonA.center.x =  newCenterL.x//self.newCenter.x
+                        self.newButtonA.center.x =  newCenterL.x
                         self.newButtonB.center = originalCenter
                         self.newButtonA.transform = CGAffineTransform(rotationAngle: 2 * 3.14)
                         self.newButtonB.transform = CGAffineTransform(rotationAngle: 2 * 3.14)
@@ -196,34 +202,34 @@ class TrainViewController: UIViewController,UIGestureRecognizerDelegate {
     @objc func didtaptrainType(){
         print("train type")
     }
-    
-    func newButton(frame: CGRect) -> UIButton{
-        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.panOnTrainingTypeButton(_:)))
-        panRecognizer.delegate = self
+    /**
+    Setup up costumized rounded button and its desinated action
+    */
+    func newButton(frame: CGRect,action: Selector,backgroundColor: UIColor = UIColor.green,borderColor: CGColor = UIColor.black.cgColor,borderWidth: CGFloat = 2,backgroundImage: UIImage? = nil,title: String = "Training Type") -> UIButton{
         let newButton = UIButton(frame: frame)
-        newButton.backgroundColor = UIColor.green
+        newButton.addTarget(self, action: action, for: .touchUpInside)
+        //Make it a rounded button
+        newButton.backgroundColor = backgroundColor
         newButton.layer.cornerRadius = 0.5 * newButton.frame.width
-        newButton.layer.borderColor = UIColor.black.cgColor
-        newButton.layer.borderWidth = 2
-        
-        newButton.setTitle("Training Type", for: .normal)
-        newButton.setTitleColor(.black, for: .normal)
-        newButton.addTarget(self, action: #selector(self.didtaptrainType), for: .touchUpInside)
-        
-        newButton.addGestureRecognizer(panRecognizer)
-        
-        
+        newButton.layer.borderColor = borderColor
+        newButton.layer.borderWidth = borderWidth
+        //Set the button Image, will show default title if no image to show.(image == nil)
+        if let backgroundImage = backgroundImage{
+            newButton.setBackgroundImage(backgroundImage, for: .normal)
+        }else{
+            newButton.setTitle(title, for: .normal)
+            newButton.setTitleColor(.black, for: .normal)
+        }
+        //TODO: See if it can provide mutiple gestur at once, or make gesture mutable
+        //Provide gesture recognizer, if there is any.
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panOnTrainingTypeButton(_:)))
+        panGesture.delegate = self
+        newButton.addGestureRecognizer(panGesture)
         return newButton
     }
     
     
-    func performSwipeAnimation(){
-//        UIView.animate(withDuration: 0, animations: {
-//            <#code#>
-//        }) { (<#Bool#>) in
-//            <#code#>
-//        }
-    }
+    
     func presentExercisePickerViewController(){
 //        var phototaker: exercisePickerViewController?
 //        exercisePickerViewController = exercisePickerViewController(nibName: "exercisePickerViewController", bundle: nil)
@@ -242,19 +248,32 @@ class TrainViewController: UIViewController,UIGestureRecognizerDelegate {
         super.init(nibName: "TrainViewController", bundle: nil)
         initController()
     }
-    
+    /**
+     Initialize elements in the controller
+     -It places elements in the view without layingout
+     -It also setup all states beneath elements
+    */
     func initController() {
         let nib = UINib(nibName: "TrainViewController", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         
-        self.heartRateLabel.isHidden = true
-        
-        self.newButtonA = newButton(frame: trainingTypeButton.frame)
-        self.newButtonB = newButton(frame: trainingTypeButton.frame)
-        self.newButtonA.setTitle(self.buttonTitle[0], for: .normal)
+        //Setup Button(s)
+        newButtonA = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[0])
+        newButtonB = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType))
         self.view.addSubview(self.newButtonA)
         self.view.addSubview(self.newButtonB)
+        trainingTypeButtonMid = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[0])
+        trainingTypeButtonLeft = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType))
+        trainingTypeButtonRight = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType))
+        self.view.addSubview(trainingTypeButtonMid)
+        self.view.addSubview(trainingTypeButtonLeft)
+        self.view.addSubview(trainingTypeButtonRight)
         
+        self.heartRateLabel.isHidden = true
+        
+        
+        
+        //Setup reactive data transfer
         self.heartRateLabel.reactive.text <~ Bluetooth.manage.heartRate.signal
         Bluetooth.manage.isAvailable.signal.observeValues { (isAvailable) in
             self.heartRateLabel.isHidden = !isAvailable
