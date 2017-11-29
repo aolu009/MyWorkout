@@ -6,13 +6,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainViewController" customModule="MyWorkout" customModuleProvider="target">
             <connections>
+                <outlet property="addTrainingButton" destination="Dmb-zT-YuC" id="HGh-5K-GtF"/>
+                <outlet property="heartRateLabel" destination="g2U-m8-3WS" id="WNd-Sn-PBG"/>
                 <outlet property="trainNameLabel" destination="UvY-5V-IDS" id="Ldp-fF-4WT"/>
+                <outlet property="trainingTypeButton" destination="T4k-5k-tnN" id="Kyp-Zn-Khb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,12 +27,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4k-5k-tnN">
-                    <rect key="frame" x="164" y="329" width="46" height="30"/>
+                    <rect key="frame" x="93.5" y="250.5" width="187.5" height="187.5"/>
                     <gestureRecognizers/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="fFm-9G-h8o" appends="YES" id="rCi-Ya-TXq"/>
-                    </connections>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="T4k-5k-tnN" secondAttribute="height" multiplier="1:1" id="iG2-fK-X55"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-rH-2k2">
                     <rect key="frame" x="50" y="637" width="275" height="30"/>
@@ -37,14 +44,26 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmb-zT-YuC">
-                    <rect key="frame" x="50" y="329" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="50" y="390.5" width="47.5" height="47.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Dmb-zT-YuC" secondAttribute="height" multiplier="1:1" id="AGS-AY-4T5"/>
+                    </constraints>
+                    <state key="normal" title="+"/>
                     <connections>
                         <action selector="didTapAddExercise:" destination="-1" eventType="touchUpInside" id="N7i-Rd-tg6"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvY-5V-IDS">
-                    <rect key="frame" x="166" y="374" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="21" text="Training Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvY-5V-IDS">
+                    <rect key="frame" x="166" y="453" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-m8-3WS">
+                    <rect key="frame" x="163.5" y="188.5" width="47" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="g2U-m8-3WS" secondAttribute="height" multiplier="1:1" id="2Ll-N3-U4V"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -56,18 +75,18 @@
                 <constraint firstAttribute="bottom" secondItem="QU5-rH-2k2" secondAttribute="bottom" id="DTR-Cg-x3G"/>
                 <constraint firstItem="T4k-5k-tnN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="FD8-z3-uYd"/>
                 <constraint firstItem="QU5-rH-2k2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="IAR-Cv-9C9"/>
+                <constraint firstItem="T4k-5k-tnN" firstAttribute="top" secondItem="g2U-m8-3WS" secondAttribute="bottom" constant="15" id="OSK-V7-xLz"/>
                 <constraint firstItem="UvY-5V-IDS" firstAttribute="centerX" secondItem="T4k-5k-tnN" secondAttribute="centerX" id="Po2-Y5-8SO"/>
                 <constraint firstItem="UvY-5V-IDS" firstAttribute="top" secondItem="T4k-5k-tnN" secondAttribute="bottom" constant="15" id="SHM-QM-I9j"/>
                 <constraint firstAttribute="trailing" secondItem="QU5-rH-2k2" secondAttribute="trailing" constant="50" id="VqC-2m-hUu"/>
+                <constraint firstItem="Dmb-zT-YuC" firstAttribute="width" secondItem="T4k-5k-tnN" secondAttribute="width" multiplier="0.25" id="hdg-4h-oku"/>
                 <constraint firstItem="Dmb-zT-YuC" firstAttribute="bottom" secondItem="T4k-5k-tnN" secondAttribute="bottom" id="ifk-Xu-3Zp"/>
+                <constraint firstItem="g2U-m8-3WS" firstAttribute="width" secondItem="T4k-5k-tnN" secondAttribute="width" multiplier="0.25" id="nTR-6v-C9W"/>
+                <constraint firstItem="g2U-m8-3WS" firstAttribute="centerX" secondItem="T4k-5k-tnN" secondAttribute="centerX" id="pkd-KQ-ak8"/>
                 <constraint firstItem="T4k-5k-tnN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sIQ-pb-vZk"/>
+                <constraint firstItem="T4k-5k-tnN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="uJw-jr-Zfh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
-        <swipeGestureRecognizer direction="right" id="fFm-9G-h8o">
-            <connections>
-                <action selector="onSwipe:" destination="-1" id="QyZ-ee-peE"/>
-            </connections>
-        </swipeGestureRecognizer>
     </objects>
 </document>

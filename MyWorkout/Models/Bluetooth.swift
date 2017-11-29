@@ -22,6 +22,7 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
     var manager:CBCentralManager!
     var peripheral:CBPeripheral!
     private (set) var heartRate = MutableProperty<String>("0")
+    private (set) var isAvailable = MutableProperty<Bool>(false)
     
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -29,6 +30,7 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
             print("Bluetooth: Scanning")
             central.scanForPeripherals(withServices: nil, options: nil)
         } else {
+            self.isAvailable.value = false
             print("Bluetooth: Bluetooth not available.")
         }
     }
@@ -36,11 +38,11 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber){
         if let localName = advertisementData[CBAdvertisementDataLocalNameKey] as? String{
             print("Bluetooth: \(localName)")
-            if (localName.starts(with: "Polar ")) {
-                let items = localName.split(separator: " ")//localName.characters.split(separator: " ").map(String.init)
+            if localName.starts(with: "Polar ") {
+                let items = localName.split(separator: " ")
                 if items.count > 2 {
                     let polarDeviceId = items.last
-                    if( polarDeviceId == "0B841323" && peripheral.state == .disconnected ){
+                    if polarDeviceId == "0B841323" && peripheral.state == .disconnected{
                         central.stopScan()
                         self.peripheral = peripheral
                         self.peripheral.delegate = self
@@ -110,7 +112,7 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
             }
             
             print("Bluetooth: SensorContacted: \(sensorContact)")
-            
+            self.isAvailable.value = true
             let hrValue = hrFormat == 1 ? (Int(data![1]) + (Int(data![2]) << 8)) : Int(data![1]);
             self.heartRate.value = String(hrValue)
             print("Bluetooth: Format: \(hrFormat) = \(Int(hrFormat)) = UINT8")

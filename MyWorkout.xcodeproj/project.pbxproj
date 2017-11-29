@@ -15,6 +15,7 @@
 		BF2C4DBB1FB70AA1004133C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8496191FAC313700487F45 /* Info.plist */; };
 		BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */; };
 		BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3211111FADD03A003F1B34 /* UserAccount.swift */; };
+		BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B669F1FB995EF00249D4D /* TrainHistroyViewModel.swift */; };
 		BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */; };
 		BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4892A81FAF0F770068D856 /* TrainViewController.swift */; };
 		BF4892AB1FAF0F770068D856 /* TrainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4892A91FAF0F770068D856 /* TrainViewController.xib */; };
@@ -58,6 +59,7 @@
 		BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		BF3211111FADD03A003F1B34 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		BF3B669F1FB995EF00249D4D /* TrainHistroyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistroyViewModel.swift; sourceTree = "<group>"; };
 		BF4892A41FADE49B0068D856 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BF4892A81FAF0F770068D856 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
 		BF4892A91FAF0F770068D856 /* TrainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainViewController.xib; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4892A71FAED5620068D856 /* LoginProcess */,
+				BF3B669F1FB995EF00249D4D /* TrainHistroyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			files = (
 				BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */,
 				BF55CCEA1FAC628600F14E7C /* SignUpViewController.swift in Sources */,
+				BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */,
 				BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */,
 				BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */,
 				BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */,

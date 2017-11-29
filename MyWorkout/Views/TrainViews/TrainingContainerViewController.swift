@@ -24,6 +24,7 @@ class TrainingContainerViewController: UIViewController {
     @IBOutlet weak var tabBarHeight: NSLayoutConstraint!
     
     var originalTopBorder: CGFloat!
+    var originalTabBarHeight: CGFloat!
     
     var containerViewController: UIViewController!{
         didSet(oldContentViewController){
@@ -60,14 +61,20 @@ class TrainingContainerViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidLayoutSubviews() {
+//        self.originalTabBarHeight = 0.08 * self.view.frame.height
+//        self.tabBarHeight.constant = self.originalTabBarHeight
+    }
+    
     @IBAction func didTabClose(_ sender: Any) {
         UIView.animate(withDuration: 0.3, animations: {
             self.lowerContainerViewToSeg.constant = self.originalTopBorder
             self.lowerContainerViewToTop.constant = 0
-            self.tabBarHeight.constant = 40
+            self.tabBarHeight.constant = self.originalTabBarHeight
             self.view.layoutIfNeeded()
             self.closeButton.isHidden = true
             self.segmentController.isHidden = true
+            self.upperContainerView.isHidden = false
             
         })
         
@@ -98,7 +105,7 @@ class TrainingContainerViewController: UIViewController {
         }else if gesture.state == .ended{
             if velocity.y <= 0{
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.tabBar.frame.size.height = 0
+                    
                     self.lowerContainerViewToSeg.constant = 10
                     self.lowerContainerViewToTop.constant = self.lowerContainerViewToSeg.constant - self.originalTopBorder
                     self.tabBarHeight.constant = 0
@@ -106,6 +113,7 @@ class TrainingContainerViewController: UIViewController {
                 }, completion: { (bool) in
                     self.closeButton.isHidden = false
                     self.segmentController.isHidden = false
+                    self.upperContainerView.isHidden = true
                 })
             }
             
@@ -136,7 +144,8 @@ class TrainingContainerViewController: UIViewController {
         self.closeButton.isHidden = true
         self.segmentController.isHidden = true
         self.originalTopBorder = self.lowerContainerViewToSeg.constant
-        self.tabBar.layoutIfNeeded()
+        self.originalTabBarHeight = 0.08 * self.view.frame.height
+        self.tabBarHeight.constant = self.originalTabBarHeight
         
     }
 

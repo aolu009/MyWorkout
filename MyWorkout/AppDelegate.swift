@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
             vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
             // TODO: Check if below needs to be deleted.
-//            let frame = UIScreen.main.bounds
-//            self.window = UIWindow(frame: frame)
+            let frame = UIScreen.main.bounds
+            self.window = UIWindow(frame: frame)
             self.window?.rootViewController = vc1 as UIViewController
             self.window?.makeKeyAndVisible()
         }

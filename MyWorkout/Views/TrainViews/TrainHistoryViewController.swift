@@ -13,11 +13,20 @@ class TrainHistoryViewController: UIViewController,UITableViewDelegate,UITableVi
     
     // TODO: Should be a costume tableview
     @IBOutlet weak var trainingDetailTableView: UITableView!
-    var originalFrame: CGRect!
     
+    private (set) var tableViewHeight:CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewDidLayoutSubviews() {
+        trainingDetailTableView.isScrollEnabled = trainingDetailTableView.bounds.height > tableViewHeight
+        
+        
+    }
+    override func viewWillLayoutSubviews() {
+        
+        tableViewHeight = trainingDetailTableView.bounds.height
     }
     
     
@@ -28,6 +37,9 @@ class TrainHistoryViewController: UIViewController,UITableViewDelegate,UITableVi
         let cell = UITableViewCell()
         cell.textLabel?.text = "\(indexPath.row)"
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

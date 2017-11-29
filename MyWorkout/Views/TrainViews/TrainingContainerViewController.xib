@@ -19,7 +19,7 @@
                 <outlet property="lowerContainerViewToTop" destination="niB-Z4-fVK" id="5C4-zh-XIB"/>
                 <outlet property="segmentController" destination="LSP-j7-NjW" id="2NB-s1-yLY"/>
                 <outlet property="tabBar" destination="JIb-KI-deI" id="xhI-DX-dUX"/>
-                <outlet property="tabBarHeight" destination="Zto-0c-z5p" id="Ofr-hy-1UR"/>
+                <outlet property="tabBarHeight" destination="JU9-yu-ZV7" id="Y9N-8h-DVN"/>
                 <outlet property="upperContainerView" destination="DQ6-t1-o2X" id="Nlt-5K-5vi"/>
                 <outlet property="upperViewHeight" destination="6zb-j4-fW4" id="Crh-K0-gYd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -63,7 +63,7 @@
                     <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Zto-0c-z5p"/>
+                        <constraint firstAttribute="height" constant="40" id="JU9-yu-ZV7"/>
                     </constraints>
                 </view>
             </subviews>
