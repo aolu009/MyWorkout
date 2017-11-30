@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		800B9A8D4B89B2283822A74B /* Pods_MyWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACB80807719AE7D048AB897 /* Pods_MyWorkout.framework */; };
+		BF21CF1A1FD02C050070AB89 /* TrainHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */; };
+		BF21CF1B1FD02C050070AB89 /* TrainHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */; };
 		BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */; };
 		BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */; };
 		BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		3EA63F05A4DE4FBCD5008364 /* Pods-MyWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		7CCD3EDE7031E772D61E414A /* Pods-MyWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout.release.xcconfig"; sourceTree = "<group>"; };
+		BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryTableCell.swift; sourceTree = "<group>"; };
+		BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryTableCell.xib; sourceTree = "<group>"; };
 		BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryViewController.xib; sourceTree = "<group>"; };
 		BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryViewController.swift; sourceTree = "<group>"; };
 		BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */,
 				BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */,
 				BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */,
+				BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */,
+				BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */,
 			);
 			path = TrainViews;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */,
 				BF8496181FAC313700487F45 /* LaunchScreen.storyboard in Resources */,
 				BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */,
+				BF21CF1B1FD02C050070AB89 /* TrainHistoryTableCell.xib in Resources */,
 				BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */,
 				BF2C4DBA1FB70A5B004133C2 /* Assets.xcassets in Resources */,
 				BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */,
@@ -477,6 +484,7 @@
 				BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */,
 				BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */,
 				BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */,
+				BF21CF1A1FD02C050070AB89 /* TrainHistoryTableCell.swift in Sources */,
 				BF84960E1FAC313700487F45 /* AppDelegate.swift in Sources */,
 				BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */,
 				BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */,

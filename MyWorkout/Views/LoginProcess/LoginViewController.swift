@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
-    var viewModel = LoginViewModel()
+    fileprivate var viewModel = LoginViewModel()
     var login: ()
     
     override func viewDidLoad() {

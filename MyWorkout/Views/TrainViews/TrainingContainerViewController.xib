@@ -55,9 +55,6 @@
                     <rect key="frame" x="0.0" y="433.5" width="375" height="233.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="cdh-r6-UG5" appends="YES" id="L7I-rS-S3U"/>
-                    </connections>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-KI-deI">
                     <rect key="frame" x="0.0" y="627" width="375" height="40"/>
@@ -90,11 +87,6 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="14.5" y="33.5"/>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="Qju-ly-PPu"/>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="cdh-r6-UG5">
-            <connections>
-                <action selector="onPanUp:" destination="-1" id="9ef-lU-RaR"/>
-            </connections>
-        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="cdh-r6-UG5"/>
     </objects>
 </document>

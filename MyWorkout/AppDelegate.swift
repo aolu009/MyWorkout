@@ -21,8 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _ = Bluetooth.manage
         if Auth.auth().currentUser != nil{
             let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
+            let historyViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
+            historyViewController.delegate = vc1
             vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
-            vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
+            vc1.lowerContainerViewController = historyViewController
+            
             // TODO: Check if below needs to be deleted.
             let frame = UIScreen.main.bounds
             self.window = UIWindow(frame: frame)

@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="addTrainingButton" destination="Dmb-zT-YuC" id="HGh-5K-GtF"/>
                 <outlet property="heartRateLabel" destination="g2U-m8-3WS" id="WNd-Sn-PBG"/>
+                <outlet property="startButton" destination="QU5-rH-2k2" id="Jcp-UK-KLe"/>
                 <outlet property="trainNameLabel" destination="UvY-5V-IDS" id="Ldp-fF-4WT"/>
                 <outlet property="trainingTypeButton" destination="T4k-5k-tnN" id="Kyp-Zn-Khb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,7 +38,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-rH-2k2">
-                    <rect key="frame" x="50" y="637" width="275" height="30"/>
+                    <rect key="frame" x="50" y="619.5" width="275" height="47.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Start">
                         <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,6 +82,7 @@
                 <constraint firstAttribute="trailing" secondItem="QU5-rH-2k2" secondAttribute="trailing" constant="50" id="VqC-2m-hUu"/>
                 <constraint firstItem="Dmb-zT-YuC" firstAttribute="width" secondItem="T4k-5k-tnN" secondAttribute="width" multiplier="0.25" id="hdg-4h-oku"/>
                 <constraint firstItem="Dmb-zT-YuC" firstAttribute="bottom" secondItem="T4k-5k-tnN" secondAttribute="bottom" id="ifk-Xu-3Zp"/>
+                <constraint firstItem="QU5-rH-2k2" firstAttribute="height" secondItem="Dmb-zT-YuC" secondAttribute="height" id="kOY-Dw-mRs"/>
                 <constraint firstItem="g2U-m8-3WS" firstAttribute="width" secondItem="T4k-5k-tnN" secondAttribute="width" multiplier="0.25" id="nTR-6v-C9W"/>
                 <constraint firstItem="g2U-m8-3WS" firstAttribute="centerX" secondItem="T4k-5k-tnN" secondAttribute="centerX" id="pkd-KQ-ak8"/>
                 <constraint firstItem="T4k-5k-tnN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sIQ-pb-vZk"/>

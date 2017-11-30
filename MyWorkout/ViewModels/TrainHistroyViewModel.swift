@@ -9,5 +9,12 @@
 import Foundation
 
 struct TrainHistoryViewModel{
+    //How to deal with array?
+    //Image: Use given ones?
+    //name
+    //Date
+    //HR avg
+    //Duration
+    
     
 }
