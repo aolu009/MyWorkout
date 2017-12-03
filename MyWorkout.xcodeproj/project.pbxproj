@@ -10,6 +10,8 @@
 		800B9A8D4B89B2283822A74B /* Pods_MyWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACB80807719AE7D048AB897 /* Pods_MyWorkout.framework */; };
 		BF21CF1A1FD02C050070AB89 /* TrainHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */; };
 		BF21CF1B1FD02C050070AB89 /* TrainHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */; };
+		BF21CF1D1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF21CF1C1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib */; };
+		BF21CF1F1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21CF1E1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift */; };
 		BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */; };
 		BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */; };
 		BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */; };
@@ -58,6 +60,8 @@
 		7CCD3EDE7031E772D61E414A /* Pods-MyWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout.release.xcconfig"; sourceTree = "<group>"; };
 		BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryTableCell.swift; sourceTree = "<group>"; };
 		BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryTableCell.xib; sourceTree = "<group>"; };
+		BF21CF1C1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryTableHeaderView.xib; sourceTree = "<group>"; };
+		BF21CF1E1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryTableHeaderView.swift; sourceTree = "<group>"; };
 		BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainHistoryViewController.xib; sourceTree = "<group>"; };
 		BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryViewController.swift; sourceTree = "<group>"; };
 		BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */,
 				BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */,
 				BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */,
+				BF21CF1C1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib */,
+				BF21CF1E1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift */,
 			);
 			path = TrainViews;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */,
 				BF4892AB1FAF0F770068D856 /* TrainViewController.xib in Resources */,
 				BF8496131FAC313700487F45 /* Login.storyboard in Resources */,
+				BF21CF1D1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +487,7 @@
 			files = (
 				BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */,
 				BF55CCEA1FAC628600F14E7C /* SignUpViewController.swift in Sources */,
+				BF21CF1F1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift in Sources */,
 				BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */,
 				BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */,
 				BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */,

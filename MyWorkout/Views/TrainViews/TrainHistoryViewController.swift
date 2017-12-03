@@ -54,10 +54,14 @@ extension TrainHistoryViewController{
         trainingDetailTableView.isScrollEnabled = false
         trainingDetailTableView.scrollsToTop = true
         trainingDetailTableView.estimatedRowHeight = 100
+        
         let cell = UINib(nibName: "TrainHistoryTableCell", bundle: nil)
         trainingDetailTableView.register(cell, forCellReuseIdentifier: "TrainHistoryTableCell")
+        
+        trainingDetailTableView.separatorStyle = .none
         trainingDetailTableView.backgroundColor = UIColor.black
-        trainingDetailTableView.sectionHeaderHeight = 5
+        trainingDetailTableView.estimatedSectionHeaderHeight = 50
+        
         trainingDetailTableView.layoutIfNeeded()
         trainingDetailTableView.reloadData()
     }
@@ -65,15 +69,42 @@ extension TrainHistoryViewController{
 
 extension TrainHistoryViewController: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        if section == 0{
+            return 50
+        }else{
+            return 50
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "TrainHistoryTableCell", for: indexPath) as! TrainHistoryTableCell
         cell.initialize()//with viewModel
+        
         return cell
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        //TODO: How to initialize as nib?
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+        let label = UILabel(frame: CGRect(x: 5, y: 0, width: tableView.frame.width, height: 30))
+        headerView.backgroundColor = UIColor.darkGray
+        headerView.layer.cornerRadius = 0.1 * headerView.frame.height
+        headerView.layer.shadowColor = UIColor.blue.cgColor
+        headerView.layer.shadowOpacity = 0.5
+        headerView.layer.shadowRadius = 4
+        headerView.layer.shadowOffset = CGSize.zero
+        label.textColor = UIColor.blue
+        headerView.addSubview(label)
+        if section == 0{
+            label.text = "Last Session"
+        }else{
+            label.text = "222222222222222222"
+        }
+        return headerView
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
 }
 extension TrainHistoryViewController: UITableViewDelegate{

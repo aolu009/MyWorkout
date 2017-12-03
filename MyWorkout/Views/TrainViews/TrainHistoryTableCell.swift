@@ -33,6 +33,7 @@ class TrainHistoryTableCell: UITableViewCell {
         self.trainDuration.textColor = UIColor.white
         self.backgroundColor = UIColor.black
         self.trainTypeImage.backgroundColor = UIColor.red
+        self.selectionStyle = .none
     }
     
 }

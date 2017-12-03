@@ -17,6 +17,7 @@
                 <outlet property="addTrainingButton" destination="Dmb-zT-YuC" id="HGh-5K-GtF"/>
                 <outlet property="heartRateLabel" destination="g2U-m8-3WS" id="WNd-Sn-PBG"/>
                 <outlet property="startButton" destination="QU5-rH-2k2" id="Jcp-UK-KLe"/>
+                <outlet property="startButtonToBottom" destination="DTR-Cg-x3G" id="F2x-3X-HUL"/>
                 <outlet property="trainNameLabel" destination="UvY-5V-IDS" id="Ldp-fF-4WT"/>
                 <outlet property="trainingTypeButton" destination="T4k-5k-tnN" id="Kyp-Zn-Khb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

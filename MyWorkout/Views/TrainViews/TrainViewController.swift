@@ -19,6 +19,7 @@ class TrainViewController: UIViewController {
     @IBOutlet weak var trainingTypeButton: UIButton!
     @IBOutlet weak var addTrainingButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var startButtonToBottom: NSLayoutConstraint!
     
     /**
      Left,Middle,Right Button
@@ -113,6 +114,7 @@ private extension TrainViewController{
         trainNameLabel.textColor = UIColor.blue
         
         self.view.backgroundColor = UIColor.black
+        startButtonToBottom.constant = startButton.frame.height/3
     }
     
     func placeButtons(){
@@ -141,7 +143,7 @@ extension TrainViewController: UIGestureRecognizerDelegate{
     /**
      Setup up costumized rounded button and its desinated action
      */
-    func newButton(frame: CGRect,action: Selector,backgroundColor: UIColor = UIColor.green,borderColor: CGColor = UIColor.black.cgColor,borderWidth: CGFloat = 2,backgroundImage: UIImage? = nil,title: String = "Training Type") -> UIButton{
+    func newButton(frame: CGRect,action: Selector,backgroundColor: UIColor = UIColor.green,borderColor: CGColor = UIColor.blue.cgColor,borderWidth: CGFloat = 2,backgroundImage: UIImage? = nil,title: String = "Training Type") -> UIButton{
         let newButton = UIButton(frame: frame)
         newButton.addTarget(self, action: action, for: .touchUpInside)
         //Make it a rounded button
@@ -170,7 +172,6 @@ extension TrainViewController: UIGestureRecognizerDelegate{
         
         let translation = gesture.translation(in: view)
         let velocity = gesture.velocity(in: view)
-        
         let angleRotate: CGFloat! = 4 * 3.14 * (translation.x/self.view.frame.width)
         let dataIdxRight = trainTypeOptionIdx == buttonTitle.count - 1 ? trainTypeOptionIdx : trainTypeOptionIdx + 1
         let dataIdxLeft = trainTypeOptionIdx == 0 ? trainTypeOptionIdx : trainTypeOptionIdx - 1
