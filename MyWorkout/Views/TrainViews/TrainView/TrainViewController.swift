@@ -91,27 +91,29 @@ class TrainViewController: UIViewController {
 private extension TrainViewController{
     
     func setupButtons(){
+        //Setup Training Type Button
         trainingTypeButtonMidCenter = view.center
         trainingTypeButtonLeftCenter = CGPoint(x: -self.view.frame.width/2, y: view.center.y)
         trainingTypeButtonRightCenter = CGPoint(x: 3 * self.view.frame.width/2, y: view.center.y)
         trainingTypeButtonMid.center = trainingTypeButtonMidCenter
         trainingTypeButtonLeft.center = trainingTypeButtonLeftCenter
         trainingTypeButtonRight.center = trainingTypeButtonRightCenter
-        
+        //Setup addTrainingButton
         addTrainingButton.layer.cornerRadius = 0.5 * addTrainingButton.frame.width
         addTrainingButton.layer.borderColor = UIColor.blue.cgColor
         addTrainingButton.layer.borderWidth = 2
         addTrainingButton.backgroundColor = UIColor.red
-        
+        //Setup heartRateLabel
         heartRateLabel.layer.cornerRadius = 0.5 * heartRateLabel.frame.width
         heartRateLabel.layer.borderColor = UIColor.blue.cgColor
         heartRateLabel.layer.borderWidth = 2
-        heartRateLabel.backgroundColor = UIColor.red
+        heartRateLabel.layer.backgroundColor = UIColor.red.cgColor
+        //heartRateLabel.backgroundColor = UIColor.red
         
         startButton.backgroundColor = UIColor.red
         startButton.layer.cornerRadius = 0.1 * startButton.frame.height
         
-        trainNameLabel.textColor = UIColor.blue
+        trainNameLabel.textColor = UIColor.white
         
         self.view.backgroundColor = UIColor.black
         startButtonToBottom.constant = startButton.frame.height/3
@@ -166,7 +168,7 @@ extension TrainViewController: UIGestureRecognizerDelegate{
         return newButton
     }
     /**
-     How Button when panning on it
+     How Button move when panning on it
     */
     @objc func panOnTrainingTypeButton(_ gesture: UIPanGestureRecognizer) {
         
@@ -235,6 +237,7 @@ extension TrainViewController: UIGestureRecognizerDelegate{
                     }, completion: { (done) in
                         self.trainingTypeButtonMid = self.trainingTypeButtonLeft
                         self.trainTypeOptionIdx -= 1
+                        //self.trainNameLabel.text = "Training Type \(self.trainTypeOptionIdx)"
                     })
                 }
             }else if velocity.x < 0 && trainingTypeButtonMid.center.x < 3 * view.frame.width/7{//Ending in paning to the left

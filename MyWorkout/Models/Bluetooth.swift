@@ -22,6 +22,7 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
     var manager:CBCentralManager!
     var peripheral:CBPeripheral!
     private (set) var heartRate = MutableProperty<String>("0")
+    private (set) var heartRateDouble = MutableProperty<Double>(0.0)
     private (set) var isAvailable = MutableProperty<Bool>(false)
     
     
@@ -115,6 +116,7 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
             self.isAvailable.value = true
             let hrValue = hrFormat == 1 ? (Int(data![1]) + (Int(data![2]) << 8)) : Int(data![1]);
             self.heartRate.value = String(hrValue)
+            heartRateDouble.value = Double(hrValue)
             print("Bluetooth: Format: \(hrFormat) = \(Int(hrFormat)) = UINT8")
             print("Bluetooth: HR_MEASUREMENT: \(hrValue)")
             

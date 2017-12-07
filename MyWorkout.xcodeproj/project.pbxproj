@@ -16,7 +16,6 @@
 		BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */; };
 		BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */; };
 		BF2C4DBA1FB70A5B004133C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8496141FAC313700487F45 /* Assets.xcassets */; };
-		BF2C4DBB1FB70AA1004133C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8496191FAC313700487F45 /* Info.plist */; };
 		BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */; };
 		BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3211111FADD03A003F1B34 /* UserAccount.swift */; };
 		BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B669F1FB995EF00249D4D /* TrainHistroyViewModel.swift */; };
@@ -36,6 +35,14 @@
 		BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
 		BF84963D1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
 		BF84963E1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
+		BFFBF0C11FD4DEFF009FBFF7 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */; };
+		BFFBF0C21FD4DEFF009FBFF7 /* BodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */; };
+		BFFBF0C61FD4DF2B009FBFF7 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */; };
+		BFFBF0C71FD4DF2B009FBFF7 /* SleepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0C51FD4DF2B009FBFF7 /* SleepViewController.xib */; };
+		BFFBF0CB1FD4DF6F009FBFF7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0C91FD4DF6F009FBFF7 /* ProfileViewController.swift */; };
+		BFFBF0CC1FD4DF6F009FBFF7 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0CA1FD4DF6F009FBFF7 /* ProfileViewController.xib */; };
+		BFFBF0D01FD53A5A009FBFF7 /* PersonalBestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0CE1FD53A5A009FBFF7 /* PersonalBestViewController.swift */; };
+		BFFBF0D11FD53A5A009FBFF7 /* PersonalBestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0CF1FD53A5A009FBFF7 /* PersonalBestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +96,14 @@
 		BF84962D1FAC313700487F45 /* MyWorkoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutUITests.swift; sourceTree = "<group>"; };
 		BF84962F1FAC313700487F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
+		BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyViewController.xib; sourceTree = "<group>"; };
+		BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
+		BFFBF0C51FD4DF2B009FBFF7 /* SleepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepViewController.xib; sourceTree = "<group>"; };
+		BFFBF0C91FD4DF6F009FBFF7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BFFBF0CA1FD4DF6F009FBFF7 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		BFFBF0CE1FD53A5A009FBFF7 /* PersonalBestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBestViewController.swift; sourceTree = "<group>"; };
+		BFFBF0CF1FD53A5A009FBFF7 /* PersonalBestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalBestViewController.xib; sourceTree = "<group>"; };
 		DACB80807719AE7D048AB897 /* Pods_MyWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,16 +153,9 @@
 		BF2C4DB11FB1C3F9004133C2 /* TrainViews */ = {
 			isa = PBXGroup;
 			children = (
-				BF4892A81FAF0F770068D856 /* TrainViewController.swift */,
-				BF4892A91FAF0F770068D856 /* TrainViewController.xib */,
-				BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */,
-				BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */,
-				BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */,
-				BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */,
-				BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */,
-				BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */,
-				BF21CF1C1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib */,
-				BF21CF1E1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift */,
+				BFFBF0BA1FD3BBCD009FBFF7 /* TrainingContainerView */,
+				BFFBF0BB1FD3BBFE009FBFF7 /* TrainView */,
+				BFFBF0BC1FD3BC44009FBFF7 /* TrainHistoryView */,
 			);
 			path = TrainViews;
 			sourceTree = "<group>";
@@ -183,6 +191,9 @@
 			children = (
 				BF4892A61FAED5180068D856 /* LoginProcess */,
 				BF2C4DB11FB1C3F9004133C2 /* TrainViews */,
+				BFFBF0C31FD4DF0A009FBFF7 /* BodyViews */,
+				BFFBF0C81FD4DF40009FBFF7 /* SleepViews */,
+				BFFBF0CD1FD4DF7A009FBFF7 /* ProfileViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +279,82 @@
 				BF8496111FAC313700487F45 /* Login.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		BFFBF0BA1FD3BBCD009FBFF7 /* TrainingContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				BF6973F71FB05D47005C68A5 /* TrainingContainerViewController.swift */,
+				BF6973F81FB05D47005C68A5 /* TrainingContainerViewController.xib */,
+			);
+			path = TrainingContainerView;
+			sourceTree = "<group>";
+		};
+		BFFBF0BB1FD3BBFE009FBFF7 /* TrainView */ = {
+			isa = PBXGroup;
+			children = (
+				BF4892A81FAF0F770068D856 /* TrainViewController.swift */,
+				BF4892A91FAF0F770068D856 /* TrainViewController.xib */,
+			);
+			path = TrainView;
+			sourceTree = "<group>";
+		};
+		BFFBF0BC1FD3BC44009FBFF7 /* TrainHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C4DB61FB1F5B8004133C2 /* TrainHistoryViewController.swift */,
+				BF2C4DB31FB1CC9F004133C2 /* TrainHistoryViewController.xib */,
+				BFFBF0BE1FD3BCA7009FBFF7 /* TableCells */,
+				BFFBF0BD1FD3BC73009FBFF7 /* TableHeaderView */,
+				BFFBF0CE1FD53A5A009FBFF7 /* PersonalBestViewController.swift */,
+				BFFBF0CF1FD53A5A009FBFF7 /* PersonalBestViewController.xib */,
+			);
+			path = TrainHistoryView;
+			sourceTree = "<group>";
+		};
+		BFFBF0BD1FD3BC73009FBFF7 /* TableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				BF21CF1C1FD13EAD0070AB89 /* TrainHistoryTableHeaderView.xib */,
+				BF21CF1E1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift */,
+			);
+			path = TableHeaderView;
+			sourceTree = "<group>";
+		};
+		BFFBF0BE1FD3BCA7009FBFF7 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				BF21CF181FD02C050070AB89 /* TrainHistoryTableCell.swift */,
+				BF21CF191FD02C050070AB89 /* TrainHistoryTableCell.xib */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		BFFBF0C31FD4DF0A009FBFF7 /* BodyViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */,
+				BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */,
+			);
+			path = BodyViews;
+			sourceTree = "<group>";
+		};
+		BFFBF0C81FD4DF40009FBFF7 /* SleepViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */,
+				BFFBF0C51FD4DF2B009FBFF7 /* SleepViewController.xib */,
+			);
+			path = SleepViews;
+			sourceTree = "<group>";
+		};
+		BFFBF0CD1FD4DF7A009FBFF7 /* ProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBF0C91FD4DF6F009FBFF7 /* ProfileViewController.swift */,
+				BFFBF0CA1FD4DF6F009FBFF7 /* ProfileViewController.xib */,
+			);
+			path = ProfileViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,13 +467,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2C4DBB1FB70AA1004133C2 /* Info.plist in Resources */,
 				BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */,
 				BF8496181FAC313700487F45 /* LaunchScreen.storyboard in Resources */,
 				BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */,
+				BFFBF0CC1FD4DF6F009FBFF7 /* ProfileViewController.xib in Resources */,
 				BF21CF1B1FD02C050070AB89 /* TrainHistoryTableCell.xib in Resources */,
+				BFFBF0C71FD4DF2B009FBFF7 /* SleepViewController.xib in Resources */,
+				BFFBF0D11FD53A5A009FBFF7 /* PersonalBestViewController.xib in Resources */,
 				BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */,
 				BF2C4DBA1FB70A5B004133C2 /* Assets.xcassets in Resources */,
+				BFFBF0C21FD4DEFF009FBFF7 /* BodyViewController.xib in Resources */,
 				BF2C4DC01FB70C32004133C2 /* LaunchScreen.png in Resources */,
 				BF4892AB1FAF0F770068D856 /* TrainViewController.xib in Resources */,
 				BF8496131FAC313700487F45 /* Login.storyboard in Resources */,
@@ -435,6 +525,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyWorkout/Pods-MyWorkout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
@@ -446,6 +537,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
@@ -491,12 +583,16 @@
 				BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */,
 				BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */,
 				BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */,
+				BFFBF0CB1FD4DF6F009FBFF7 /* ProfileViewController.swift in Sources */,
 				BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */,
 				BF21CF1A1FD02C050070AB89 /* TrainHistoryTableCell.swift in Sources */,
 				BF84960E1FAC313700487F45 /* AppDelegate.swift in Sources */,
 				BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */,
+				BFFBF0D01FD53A5A009FBFF7 /* PersonalBestViewController.swift in Sources */,
 				BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */,
 				BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */,
+				BFFBF0C61FD4DF2B009FBFF7 /* SleepViewController.swift in Sources */,
+				BFFBF0C11FD4DEFF009FBFF7 /* BodyViewController.swift in Sources */,
 				BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingContainerViewController" customModule="MyWorkout" customModuleProvider="target">
+            <connections>
+                <outlet property="bodyButtonToTrainButton" destination="kKe-Q7-Orp" id="sIB-DR-Fxj"/>
+                <outlet property="closeButton" destination="KbL-wE-OCq" id="6Y3-KK-jg3"/>
+                <outlet property="lowerContainerView" destination="Wek-sz-60n" id="dHU-QR-53o"/>
+                <outlet property="lowerContainerViewToSeg" destination="beI-6D-gfG" id="Q3h-3l-e4b"/>
+                <outlet property="lowerContainerViewToTop" destination="niB-Z4-fVK" id="5C4-zh-XIB"/>
+                <outlet property="profileButtonToSleepButton" destination="FUr-FT-a7U" id="fJ9-6h-9NG"/>
+                <outlet property="segmentController" destination="LSP-j7-NjW" id="2NB-s1-yLY"/>
+                <outlet property="sleepButtonToBodyButton" destination="pug-zQ-38I" id="wwG-wa-VUj"/>
+                <outlet property="tabBar" destination="JIb-KI-deI" id="xhI-DX-dUX"/>
+                <outlet property="tabBarHeight" destination="JU9-yu-ZV7" id="Y9N-8h-DVN"/>
+                <outlet property="tabBarView" destination="GV1-k8-O6Y" id="bN8-ZP-eRh"/>
+                <outlet property="trainButtonToLeftBorder" destination="F1m-RL-iZB" id="huc-nK-qW1"/>
+                <outlet property="upperContainerView" destination="DQ6-t1-o2X" id="Nlt-5K-5vi"/>
+                <outlet property="upperViewHeight" destination="6zb-j4-fW4" id="Crh-K0-gYd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="tabBarButtons" destination="pn9-RU-pnX" collectionClass="NSMutableArray" id="daG-Jm-Ahj"/>
+                <outletCollection property="tabBarButtons" destination="GZn-Js-6iN" collectionClass="NSMutableArray" id="Szg-rc-MNe"/>
+                <outletCollection property="tabBarButtons" destination="fy8-QW-Py1" collectionClass="NSMutableArray" id="R8G-pj-mxZ"/>
+                <outletCollection property="tabBarButtons" destination="jeC-kZ-c5y" collectionClass="NSMutableArray" id="9Nj-Z6-HdP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQ6-t1-o2X">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="433.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LSP-j7-NjW">
+                    <rect key="frame" x="16" y="82" width="343" height="29"/>
+                    <segments>
+                        <segment title="Sessions"/>
+                        <segment title="Personal Best"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentDidSelect:" destination="-1" eventType="valueChanged" id="3a4-NF-qL8"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbL-wE-OCq">
+                    <rect key="frame" x="320" y="36" width="39" height="30"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="didTabClose:" destination="-1" eventType="touchUpInside" id="SXW-DM-U8C"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-sz-60n">
+                    <rect key="frame" x="0.0" y="433.5" width="375" height="233.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GV1-k8-O6Y">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="ZHr-dF-IeU"/>
+                </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-KI-deI">
+                    <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pn9-RU-pnX">
+                            <rect key="frame" x="23" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="pn9-RU-pnX" secondAttribute="height" multiplier="1:1" id="JVC-wl-WHr"/>
+                            </constraints>
+                            <state key="normal" title="T"/>
+                            <connections>
+                                <action selector="didTabOnTabBarWithTabBarButton:" destination="-1" eventType="touchUpInside" id="aeK-hW-bUQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-Js-6iN">
+                            <rect key="frame" x="102" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="GZn-Js-6iN" secondAttribute="height" multiplier="1:1" id="Yxs-MD-KhG"/>
+                            </constraints>
+                            <state key="normal" title="B"/>
+                            <connections>
+                                <action selector="didTabOnTabBarWithTabBarButton:" destination="-1" eventType="touchUpInside" id="Jwp-wc-dJ9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy8-QW-Py1">
+                            <rect key="frame" x="194" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="fy8-QW-Py1" secondAttribute="height" multiplier="1:1" id="Pqw-vX-6rA"/>
+                            </constraints>
+                            <state key="normal" title="S"/>
+                            <connections>
+                                <action selector="didTabOnTabBarWithTabBarButton:" destination="-1" eventType="touchUpInside" id="ytp-Lw-8Y5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-kZ-c5y">
+                            <rect key="frame" x="303" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="jeC-kZ-c5y" secondAttribute="height" multiplier="1:1" id="lU9-dU-Obm"/>
+                            </constraints>
+                            <state key="normal" title="P"/>
+                            <connections>
+                                <action selector="didTabOnTabBarWithTabBarButton:" destination="-1" eventType="touchUpInside" id="qex-hJ-dJi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fy8-QW-Py1" firstAttribute="height" secondItem="JIb-KI-deI" secondAttribute="height" multiplier="1:1" id="3TA-N7-9ta"/>
+                        <constraint firstItem="pn9-RU-pnX" firstAttribute="leading" secondItem="JIb-KI-deI" secondAttribute="leading" constant="23" id="F1m-RL-iZB"/>
+                        <constraint firstItem="jeC-kZ-c5y" firstAttribute="leading" secondItem="fy8-QW-Py1" secondAttribute="trailing" constant="69" id="FUr-FT-a7U"/>
+                        <constraint firstAttribute="height" constant="40" id="JU9-yu-ZV7"/>
+                        <constraint firstItem="jeC-kZ-c5y" firstAttribute="centerY" secondItem="JIb-KI-deI" secondAttribute="centerY" id="Y5C-lF-A8F"/>
+                        <constraint firstItem="pn9-RU-pnX" firstAttribute="height" secondItem="JIb-KI-deI" secondAttribute="height" multiplier="1:1" id="aVa-63-bKW"/>
+                        <constraint firstItem="GZn-Js-6iN" firstAttribute="centerY" secondItem="JIb-KI-deI" secondAttribute="centerY" id="bCR-PK-WI8"/>
+                        <constraint firstItem="pn9-RU-pnX" firstAttribute="centerY" secondItem="JIb-KI-deI" secondAttribute="centerY" id="fbp-nj-gxU"/>
+                        <constraint firstItem="jeC-kZ-c5y" firstAttribute="height" secondItem="JIb-KI-deI" secondAttribute="height" multiplier="1:1" id="iXc-PM-1PU"/>
+                        <constraint firstItem="GZn-Js-6iN" firstAttribute="height" secondItem="JIb-KI-deI" secondAttribute="height" multiplier="1:1" id="ig2-QT-L1q"/>
+                        <constraint firstItem="GZn-Js-6iN" firstAttribute="leading" secondItem="pn9-RU-pnX" secondAttribute="trailing" constant="39" id="kKe-Q7-Orp"/>
+                        <constraint firstItem="fy8-QW-Py1" firstAttribute="leading" secondItem="GZn-Js-6iN" secondAttribute="trailing" constant="52" id="pug-zQ-38I"/>
+                        <constraint firstItem="fy8-QW-Py1" firstAttribute="centerY" secondItem="JIb-KI-deI" secondAttribute="centerY" id="qTU-bN-CFG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KbL-wE-OCq" firstAttribute="trailing" secondItem="LSP-j7-NjW" secondAttribute="trailing" id="5PG-5m-f2P"/>
+                <constraint firstItem="KbL-wE-OCq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="5jJ-i4-emx"/>
+                <constraint firstItem="DQ6-t1-o2X" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.67" id="6zb-j4-fW4"/>
+                <constraint firstItem="GV1-k8-O6Y" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9oe-mC-GqT"/>
+                <constraint firstItem="GV1-k8-O6Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CAv-pt-71v"/>
+                <constraint firstItem="Wek-sz-60n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fol-B9-zkL"/>
+                <constraint firstItem="LSP-j7-NjW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Gnl-ni-rcf"/>
+                <constraint firstItem="LSP-j7-NjW" firstAttribute="top" secondItem="KbL-wE-OCq" secondAttribute="bottom" constant="16" id="HaQ-zH-OlV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LSP-j7-NjW" secondAttribute="trailing" constant="16" id="Jqi-Gg-nGO"/>
+                <constraint firstItem="JIb-KI-deI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KKF-0U-kow"/>
+                <constraint firstItem="JIb-KI-deI" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="LRX-gW-TTy"/>
+                <constraint firstItem="JIb-KI-deI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X0q-94-xF1"/>
+                <constraint firstItem="DQ6-t1-o2X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b4e-mw-dRs"/>
+                <constraint firstItem="Wek-sz-60n" firstAttribute="top" secondItem="LSP-j7-NjW" secondAttribute="bottom" constant="323.5" id="beI-6D-gfG"/>
+                <constraint firstItem="JIb-KI-deI" firstAttribute="top" secondItem="GV1-k8-O6Y" secondAttribute="bottom" id="dR4-WD-SPf"/>
+                <constraint firstItem="DQ6-t1-o2X" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="idU-rj-7a3"/>
+                <constraint firstItem="Wek-sz-60n" firstAttribute="top" secondItem="DQ6-t1-o2X" secondAttribute="bottom" id="niB-Z4-fVK"/>
+                <constraint firstItem="DQ6-t1-o2X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qRC-Kp-zat"/>
+                <constraint firstItem="GV1-k8-O6Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tgR-mF-B9D"/>
+                <constraint firstItem="Wek-sz-60n" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="wes-kM-eBN"/>
+                <constraint firstItem="Wek-sz-60n" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xT2-pD-YO5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="14.5" y="33.5"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="cdh-r6-UG5"/>
+    </objects>
+</document>

@@ -20,16 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         let _ = Bluetooth.manage
         if Auth.auth().currentUser != nil{
-            let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
-            let historyViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
-            historyViewController.delegate = vc1
-            vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
-            vc1.lowerContainerViewController = historyViewController
+            
+            let vc0 = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil) as UIViewController
+            let vc1 = BodyViewController(nibName: "BodyViewController", bundle: nil) as UIViewController
+            let vc2 = SleepViewController(nibName: "SleepViewController", bundle: nil) as UIViewController
+            let vc3 = ProfileViewController(nibName: "ProfileViewController", bundle: nil) as UIViewController
+            
+            let vc = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
+            vc.viewControllers = [vc0,vc1,vc2,vc3]
+            
+            let historyViewController = vc.viewControllers[0] as! TrainHistoryViewController
+            historyViewController.delegate = vc
+            
+            vc.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+            vc.lowerContainerViewController = historyViewController
             
             // TODO: Check if below needs to be deleted.
             let frame = UIScreen.main.bounds
             self.window = UIWindow(frame: frame)
-            self.window?.rootViewController = vc1 as UIViewController
+            self.window?.rootViewController = vc as UIViewController
             self.window?.makeKeyAndVisible()
         }
         return true

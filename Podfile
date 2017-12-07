@@ -9,6 +9,7 @@ target 'MyWorkout' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'ReactiveCocoa'
+  pod 'Charts'
   use_frameworks!
 
 #  # Pods for MyWorkout
