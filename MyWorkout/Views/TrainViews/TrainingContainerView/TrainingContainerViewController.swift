@@ -169,6 +169,7 @@ private extension TrainingContainerViewController{
         tabBar.layer.shadowOffset = CGSize.zero
         tabBarButtons[prevSelectedButtonTag].isSelected = true
     }
+    
 //    func createTabBarButton(tabBarFrame: CGRect,nTh: CGFloat,numOfButton: CGFloat = 4, title: String = "Test") -> UIButton{
 //        let buttonWidth = tabBarFrame.width/numOfButton
 //        let frame = CGRect(x: nTh * buttonWidth, y: tabBarFrame.minY, width: buttonWidth, height: tabBarFrame.height)
@@ -209,7 +210,7 @@ extension TrainingContainerViewController: UIGestureRecognizerDelegate{
         if gesture.state == .began{
             tabBarButtons[prevSelectedButtonTag].isSelected = false
         }else if gesture.state == .changed{
-            if velocity.y < 0 && self.originalTopBorder + translation.y > 10{
+            if velocity.y < 0 && self.originalTopBorder + translation.y > 10 && self.tabBarHeight.constant != 0{
                 self.lowerContainerViewToSeg.constant = self.originalTopBorder + translation.y
                 self.lowerContainerViewToTop.constant = translation.y
             }
@@ -235,3 +236,4 @@ extension TrainingContainerViewController: TrainHistoryViewControllerDelegate{
         return tabBarHeight.constant == 0
     }
 }
+

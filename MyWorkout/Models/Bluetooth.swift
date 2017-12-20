@@ -6,7 +6,6 @@
 //  Copyright © 2017 Lu Ao. All rights reserved.
 //
 
-import Foundation
 import CoreBluetooth
 import ReactiveSwift
 

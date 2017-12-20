@@ -22,7 +22,6 @@ class SleepViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad")
     }
 
     required init?(coder aDecoder: NSCoder) {

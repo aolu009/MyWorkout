@@ -7,6 +7,7 @@
 //
 //
 import UIKit
+import ReactiveSwift
 
 @objc protocol TrainHistoryViewControllerDelegate {
    @objc optional func trainHistoryViewShouldEnableScroll()->Bool
@@ -15,17 +16,25 @@ import UIKit
 class TrainHistoryViewController: UIViewController{
 
     
-    // TODO: Should be a costume tableview
+    // TODO: Try to initiate a tableview using code
     @IBOutlet weak var trainingDetailTableView: UITableView!
     
-    //var viewModel = TrainHistroyViewModel()
-    //
     var delegate: TrainHistoryViewControllerDelegate?
+    
+    //TODO: Try to move the following to viewModel
+    private var allhistory = [String]()
+    private var sessions = [[TrainingSession]]()//predict size to reloadData?
+    private var doneLoading = MutableProperty<Bool>(false)
+    private var totalSessionCount = 0
+    private var sessionCount = 0
+    private var rowheight: CGFloat = 80
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     override func viewDidLayoutSubviews() {
+        
         trainingDetailTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableViewScrollPosition.top, animated: true)
         trainingDetailTableView.isScrollEnabled = (delegate?.trainHistoryViewShouldEnableScroll!())!
     }
@@ -43,7 +52,22 @@ class TrainHistoryViewController: UIViewController{
     func initController() {
         let nib = UINib(nibName: "TrainHistoryViewController", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
+        //Note: To trigger viewDidLoad(), not sure if necessary if viewDidLoad() is never used
+        view.isHidden = false
         setupDetailTableView()
+        setupDataSource()
+        //Wait until all data has been fetched
+        doneLoading.signal.observeValues { (done) in
+            
+            
+            if done{
+                self.trainingDetailTableView.reloadData()
+                self.trainingDetailTableView.rowHeight = 80
+                self.trainingDetailTableView.beginUpdates()
+                self.trainingDetailTableView.endUpdates()
+                
+            }
+        }
     }
 }
 
@@ -55,51 +79,75 @@ extension TrainHistoryViewController{
         trainingDetailTableView.scrollsToTop = true
         let cell = UINib(nibName: "TrainHistoryTableCell", bundle: nil)
         trainingDetailTableView.register(cell, forCellReuseIdentifier: "TrainHistoryTableCell")
-        trainingDetailTableView.estimatedRowHeight = 300
+        trainingDetailTableView.estimatedRowHeight = 0
         trainingDetailTableView.separatorStyle = .none
         trainingDetailTableView.backgroundColor = UIColor.black
-        trainingDetailTableView.estimatedSectionHeaderHeight = 30
-        trainingDetailTableView.layoutIfNeeded()
-        trainingDetailTableView.reloadData()
+        //trainingDetailTableView.estimatedSectionHeaderHeight = 0
+        //self.trainingDetailTableView.reloadData()
+        //trainingDetailTableView.layoutIfNeeded()
+        
+    }
+    //Steup DataSource
+    func setupDataSource(){
+        //Request months that has training sessions
+        AllTrainingHistory.getSessions { (allhistory) in
+            self.allhistory = allhistory
+            for (hisIdx,history) in self.allhistory.enumerated(){
+                //Request array of training IDs using month and uid as key. Note: uid by defaust is Auth.auth().currentUser.uid
+                self.sessions.append([TrainingSession]())
+                TrainHistory.getSessions(ID: history, completion: { (monthHistory) in
+                    self.totalSessionCount += monthHistory.sessionIDs.value.count
+                    for id in monthHistory.sessionIDs.value{
+                        //Request single session using sessionID
+                        TrainingSession.getSession(ID: id, completion: { (session) in
+                            self.sessions[hisIdx].append(session)
+                            //To guarantee that it has fetched all sessions from server
+                            self.sessionCount += 1
+                            self.doneLoading.value = self.sessionCount == self.totalSessionCount
+                        })
+                    }
+                })
+            }
+        }
     }
 }
 
 extension TrainHistoryViewController: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        guard sessions.count > 1 else{return 1}
+        return allhistory.count
     }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80
+//
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0{
-            return 1
-        }else{
-            return 50
-        }
+        guard sessions.count > 1 else{return 1}
+        return sessions[section].count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
+    //Setup session header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //TODO: How to initialize as nib?
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        let label = UILabel(frame: CGRect(x: 10, y: 0, width: tableView.frame.width, height: 30))
-        headerView.backgroundColor = UIColor.darkGray
-        headerView.layer.cornerRadius = 0.1 * headerView.frame.height
-        headerView.layer.shadowColor = UIColor.blue.cgColor
-        headerView.layer.shadowOpacity = 0.5
-        headerView.layer.shadowRadius = 4
-        headerView.layer.shadowOffset = CGSize.zero
-        label.textColor = UIColor.blue
-        headerView.addSubview(label)
-        if section == 0{
-            label.text = "Last Session"
-        }else{
-            label.text = "222222222222222222"
-        }
+        let headerView = TrainHistoryTableHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+        headerView.label = section == 0 ? "Last Session" : allhistory[section]
         return headerView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //If it is still waiting, show the syncing label
+        //TODO: Change it to loading animating circle. i.e custom animating view
+        guard sessions.count > 1 else{
+            let cell = UITableViewCell()
+            cell.backgroundColor = .black
+            cell.textLabel?.text = "Syncing..."
+            cell.textLabel?.textColor = .white
+            cell.frame.size.height = 0
+            return cell}
         let cell =  tableView.dequeueReusableCell(withIdentifier: "TrainHistoryTableCell", for: indexPath) as! TrainHistoryTableCell
-        cell.initialize()//with viewModel
+        let session = sessions[indexPath.section][indexPath.row]
+        cell.initialize(trainTypeName: session.trainName.value,HRAverage: session.avgHR.value,trainDate: "12/09",trainDuration: session.duration.value)
+        cell.frame.size.height = 70
         return cell
     }
 }

@@ -35,6 +35,7 @@
 		BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
 		BF84963D1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
 		BF84963E1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
+		BF9C826E1FE7C031001A3F09 /* AllTrainingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */; };
 		BFFBF0C11FD4DEFF009FBFF7 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */; };
 		BFFBF0C21FD4DEFF009FBFF7 /* BodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */; };
 		BFFBF0C61FD4DF2B009FBFF7 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */; };
@@ -43,6 +44,12 @@
 		BFFBF0CC1FD4DF6F009FBFF7 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0CA1FD4DF6F009FBFF7 /* ProfileViewController.xib */; };
 		BFFBF0D01FD53A5A009FBFF7 /* PersonalBestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0CE1FD53A5A009FBFF7 /* PersonalBestViewController.swift */; };
 		BFFBF0D11FD53A5A009FBFF7 /* PersonalBestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0CF1FD53A5A009FBFF7 /* PersonalBestViewController.xib */; };
+		BFFBF0D51FDA80CC009FBFF7 /* TrainHistoryTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0D41FDA80CC009FBFF7 /* TrainHistoryTableCellViewModel.swift */; };
+		BFFBF0D81FDA8A83009FBFF7 /* TrainHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0D71FDA8A83009FBFF7 /* TrainHistory.swift */; };
+		BFFBF0DB1FDBD772009FBFF7 /* FIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0DA1FDBD772009FBFF7 /* FIR.swift */; };
+		BFFCE1191FDCD5F30072C04E /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCE1181FDCD5F30072C04E /* JSONObject.swift */; };
+		BFFCE11B1FDD20D40072C04E /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCE11A1FDD20D40072C04E /* TrainingSession.swift */; };
+		BFFCE1591FE2454A0072C04E /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCE1581FE2454A0072C04E /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +103,7 @@
 		BF84962D1FAC313700487F45 /* MyWorkoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutUITests.swift; sourceTree = "<group>"; };
 		BF84962F1FAC313700487F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrainingHistory.swift; sourceTree = "<group>"; };
 		BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyViewController.xib; sourceTree = "<group>"; };
 		BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +112,12 @@
 		BFFBF0CA1FD4DF6F009FBFF7 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		BFFBF0CE1FD53A5A009FBFF7 /* PersonalBestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBestViewController.swift; sourceTree = "<group>"; };
 		BFFBF0CF1FD53A5A009FBFF7 /* PersonalBestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalBestViewController.xib; sourceTree = "<group>"; };
+		BFFBF0D41FDA80CC009FBFF7 /* TrainHistoryTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistoryTableCellViewModel.swift; sourceTree = "<group>"; };
+		BFFBF0D71FDA8A83009FBFF7 /* TrainHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainHistory.swift; sourceTree = "<group>"; };
+		BFFBF0DA1FDBD772009FBFF7 /* FIR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIR.swift; sourceTree = "<group>"; };
+		BFFCE1181FDCD5F30072C04E /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
+		BFFCE11A1FDD20D40072C04E /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
+		BFFCE1581FE2454A0072C04E /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		DACB80807719AE7D048AB897 /* Pods_MyWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,6 +217,7 @@
 			children = (
 				BF4892A71FAED5620068D856 /* LoginProcess */,
 				BF3B669F1FB995EF00249D4D /* TrainHistroyViewModel.swift */,
+				BFFBF0D41FDA80CC009FBFF7 /* TrainHistoryTableCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -212,6 +227,10 @@
 			children = (
 				BF3211111FADD03A003F1B34 /* UserAccount.swift */,
 				BF2C4DB81FB4201C004133C2 /* Bluetooth.swift */,
+				BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */,
+				BFFBF0D71FDA8A83009FBFF7 /* TrainHistory.swift */,
+				BFFCE11A1FDD20D40072C04E /* TrainingSession.swift */,
+				BFFCE1581FE2454A0072C04E /* Keys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +266,8 @@
 				BF2C4DBE1FB70C1A004133C2 /* Images */,
 				BF84960D1FAC313700487F45 /* AppDelegate.swift */,
 				BF84963F1FAC39A500487F45 /* StoryBoards */,
+				BFFBF0DA1FDBD772009FBFF7 /* FIR.swift */,
+				BFFCE1181FDCD5F30072C04E /* JSONObject.swift */,
 				BF55CCE81FAC466000F14E7C /* Models */,
 				BF55CCE71FAC464800F14E7C /* ViewModels */,
 				BF55CCE61FAC463500F14E7C /* Views */,
@@ -579,20 +600,27 @@
 			files = (
 				BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */,
 				BF55CCEA1FAC628600F14E7C /* SignUpViewController.swift in Sources */,
+				BF9C826E1FE7C031001A3F09 /* AllTrainingHistory.swift in Sources */,
 				BF21CF1F1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift in Sources */,
 				BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */,
+				BFFCE1591FE2454A0072C04E /* Keys.swift in Sources */,
 				BF6973F91FB05D47005C68A5 /* TrainingContainerViewController.swift in Sources */,
+				BFFBF0D51FDA80CC009FBFF7 /* TrainHistoryTableCellViewModel.swift in Sources */,
 				BF8496101FAC313700487F45 /* LoginViewController.swift in Sources */,
+				BFFBF0D81FDA8A83009FBFF7 /* TrainHistory.swift in Sources */,
 				BFFBF0CB1FD4DF6F009FBFF7 /* ProfileViewController.swift in Sources */,
 				BF4892AA1FAF0F770068D856 /* TrainViewController.swift in Sources */,
 				BF21CF1A1FD02C050070AB89 /* TrainHistoryTableCell.swift in Sources */,
 				BF84960E1FAC313700487F45 /* AppDelegate.swift in Sources */,
 				BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */,
+				BFFCE1191FDCD5F30072C04E /* JSONObject.swift in Sources */,
+				BFFBF0DB1FDBD772009FBFF7 /* FIR.swift in Sources */,
 				BFFBF0D01FD53A5A009FBFF7 /* PersonalBestViewController.swift in Sources */,
 				BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */,
 				BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */,
 				BFFBF0C61FD4DF2B009FBFF7 /* SleepViewController.swift in Sources */,
 				BFFBF0C11FD4DEFF009FBFF7 /* BodyViewController.swift in Sources */,
+				BFFCE11B1FDD20D40072C04E /* TrainingSession.swift in Sources */,
 				BF3211121FADD03A003F1B34 /* UserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

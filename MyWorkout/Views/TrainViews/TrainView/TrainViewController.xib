@@ -28,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4k-5k-tnN">
+                <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="187.5" placeholderIntrinsicHeight="187.5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4k-5k-tnN">
                     <rect key="frame" x="93.5" y="250.5" width="187.5" height="187.5"/>
                     <gestureRecognizers/>
                     <constraints>
