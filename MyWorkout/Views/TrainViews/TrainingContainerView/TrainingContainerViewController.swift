@@ -9,6 +9,7 @@
 // TODO: Complete the tabBar: https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Tab-Bar
 
 import UIKit
+import ReactiveSwift
 
 class TrainingContainerViewController: UIViewController {
 
@@ -39,6 +40,8 @@ class TrainingContainerViewController: UIViewController {
     private var lowerViewBounds: CGRect!
     private var originalTopBorder: CGFloat!
     private var originalTabBarHeight: CGFloat!
+    private var didtapOnTrainingType = MutableProperty<Bool>(false)
+    
     var viewControllers: [UIViewController]!
     
     
@@ -124,6 +127,7 @@ class TrainingContainerViewController: UIViewController {
     }
     
     @IBAction func segmentDidSelect(_ sender: UISegmentedControl) {
+        //TODO: Intialize somewhere else so it will only be initialize once
         if sender.selectedSegmentIndex == 1{
             lowerContainerViewController = PersonalBestViewController(nibName: "PersonalBestViewController", bundle: nil)
         }else{
@@ -235,5 +239,18 @@ extension TrainingContainerViewController: TrainHistoryViewControllerDelegate{
     func trainHistoryViewShouldEnableScroll() -> Bool {
         return tabBarHeight.constant == 0
     }
+}
+
+extension TrainingContainerViewController: TrainViewControllerDelegate{
+    func didTapOnButton(button: UIButton) {
+        
+        let confirmDatailViewController = TrainConfirmDetailViewController()
+        confirmDatailViewController.modalPresentationStyle = .overFullScreen
+        present(confirmDatailViewController, animated: true, completion: {
+            confirmDatailViewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        })
+    }
+    
+    
 }
 

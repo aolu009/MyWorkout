@@ -33,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let historyViewController = vc.viewControllers[0] as! TrainHistoryViewController
             historyViewController.delegate = vc
             
-            vc.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+            let trainViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+            trainViewController.delegate = vc
+            
+            vc.containerViewController = trainViewController
             vc.lowerContainerViewController = historyViewController
             
             // TODO: Check if below needs to be deleted.

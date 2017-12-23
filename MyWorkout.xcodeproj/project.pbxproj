@@ -36,6 +36,8 @@
 		BF84963D1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
 		BF84963E1FAC339C00487F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */; };
 		BF9C826E1FE7C031001A3F09 /* AllTrainingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */; };
+		BF9C82711FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C826F1FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift */; };
+		BF9C82721FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9C82701FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib */; };
 		BFFBF0C11FD4DEFF009FBFF7 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */; };
 		BFFBF0C21FD4DEFF009FBFF7 /* BodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */; };
 		BFFBF0C61FD4DF2B009FBFF7 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */; };
@@ -104,6 +106,8 @@
 		BF84962F1FAC313700487F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF84963B1FAC339C00487F45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrainingHistory.swift; sourceTree = "<group>"; };
+		BF9C826F1FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainConfirmDetailViewController.swift; sourceTree = "<group>"; };
+		BF9C82701FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainConfirmDetailViewController.xib; sourceTree = "<group>"; };
 		BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyViewController.xib; sourceTree = "<group>"; };
 		BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 			children = (
 				BF4892A81FAF0F770068D856 /* TrainViewController.swift */,
 				BF4892A91FAF0F770068D856 /* TrainViewController.xib */,
+				BF9C826F1FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift */,
+				BF9C82701FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib */,
 			);
 			path = TrainView;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2C4DB51FB1CC9F004133C2 /* TrainHistoryViewController.xib in Resources */,
+				BF9C82721FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib in Resources */,
 				BF8496181FAC313700487F45 /* LaunchScreen.storyboard in Resources */,
 				BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */,
 				BFFBF0CC1FD4DF6F009FBFF7 /* ProfileViewController.xib in Resources */,
@@ -615,6 +622,7 @@
 				BF2C4DB91FB4201C004133C2 /* Bluetooth.swift in Sources */,
 				BFFCE1191FDCD5F30072C04E /* JSONObject.swift in Sources */,
 				BFFBF0DB1FDBD772009FBFF7 /* FIR.swift in Sources */,
+				BF9C82711FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift in Sources */,
 				BFFBF0D01FD53A5A009FBFF7 /* PersonalBestViewController.swift in Sources */,
 				BF2C4DB71FB1F5B8004133C2 /* TrainHistoryViewController.swift in Sources */,
 				BF4892A51FADE49B0068D856 /* SignUpViewModel.swift in Sources */,

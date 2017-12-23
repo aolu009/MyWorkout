@@ -12,6 +12,10 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 
+protocol TrainViewControllerDelegate {
+    func didTapOnButton(button: UIButton)
+}
+
 class TrainViewController: UIViewController {
 
     @IBOutlet weak var trainNameLabel: UILabel!
@@ -35,12 +39,14 @@ class TrainViewController: UIViewController {
     private var trainingTypeButtonMidCenter =  CGPoint()
     private var trainingTypeButtonRightCenter =  CGPoint()
     
+    var delegate: TrainViewControllerDelegate?
     
     //TODO: Replace with viewModel data. Data Size must be greater 3
     private var buttonTitle = ["1","2","3","4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setupButtons()
     }
     override func viewDidLayoutSubviews() {
         // Circlize all button and place them in the right place after base layout is done
@@ -55,14 +61,14 @@ class TrainViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         //TODO: Do it with NSCoder
-        super.init(nibName: "TrainViewController", bundle: nil)
+        super.init(coder: aDecoder)
         //initController()
     }
     
     override init(nibName: String? , bundle: Bundle?) {
         super.init(nibName: "TrainViewController", bundle: nil)
-        view.isHidden = false
         initController()
+        view.isHidden = false
     }
     /**
      Initialize elements in the controller
@@ -73,8 +79,8 @@ class TrainViewController: UIViewController {
         let nib = UINib(nibName: "TrainViewController", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         trainNameLabel.text = "Training Type \(buttonTitle[trainTypeOptionIdx.value])"
+        //Place buttons
         placeButtons()
-        print(self.trainingTypeButtonMid.isHidden)
         heartRateLabel.isHidden = true
         //Setup reactive data transfer
         self.heartRateLabel.reactive.text <~ Bluetooth.manage.heartRate.signal
@@ -97,7 +103,18 @@ class TrainViewController: UIViewController {
  */
 private extension TrainViewController{
     
+    func placeButtons(){
+        //Setup Button(s)
+        trainingTypeButtonMid = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtapButton),title:buttonTitle[0])
+        trainingTypeButtonLeft = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtapButton))
+        trainingTypeButtonRight = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtapButton))
+        self.view.addSubview(trainingTypeButtonMid)
+        self.view.addSubview(trainingTypeButtonLeft)
+        self.view.addSubview(trainingTypeButtonRight)
+    }
+    
     func setupButtons(){
+        print("TrainViewController: Setting Up buttons")
         //Setup Training Type Button
         trainingTypeButtonMidCenter = view.center
         trainingTypeButtonLeftCenter = CGPoint(x: -self.view.frame.width/2, y: view.center.y)
@@ -110,6 +127,7 @@ private extension TrainViewController{
         addTrainingButton.layer.borderColor = UIColor.blue.cgColor
         addTrainingButton.layer.borderWidth = 2
         addTrainingButton.backgroundColor = UIColor.red
+        addTrainingButton.addTarget(self, action: #selector(self.didtapButton), for: .touchUpInside)
         //Setup heartRateLabel
         heartRateLabel.layer.cornerRadius = 0.5 * heartRateLabel.frame.width
         heartRateLabel.layer.borderColor = UIColor.blue.cgColor
@@ -119,27 +137,24 @@ private extension TrainViewController{
         
         startButton.backgroundColor = UIColor.red
         startButton.layer.cornerRadius = 0.1 * startButton.frame.height
+        startButton.addTarget(self, action: #selector(self.didtapButton), for: .touchUpInside)
+        startButtonToBottom.constant = startButton.frame.height/3
         
         trainNameLabel.textColor = UIColor.white
         
         self.view.backgroundColor = UIColor.black
-        startButtonToBottom.constant = startButton.frame.height/3
     }
     
-    func placeButtons(){
-        //Setup Button(s)
-        trainingTypeButtonMid = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[0])
-        trainingTypeButtonLeft = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType))
-        trainingTypeButtonRight = newButton(frame: trainingTypeButton.frame,action: #selector(self.didtaptrainType))
-        self.view.addSubview(trainingTypeButtonMid)
-        self.view.addSubview(trainingTypeButtonLeft)
-        self.view.addSubview(trainingTypeButtonRight)
+    /**
+     To confirm train type and its correspond detail and start
+    */
+    @objc func didtapButton(button: UIButton){
+        delegate?.didTapOnButton(button: button)
+        print("train type: \(String(describing: button.currentTitle))")
     }
-    
-    @objc func didtaptrainType(){
-        print("train type")
-    }
-    
+    /**
+     Add an exercise to queue
+    */
     func presentExercisePickerViewController(){
         //        var phototaker: exercisePickerViewController?
         //        exercisePickerViewController = exercisePickerViewController(nibName: "exercisePickerViewController", bundle: nil)
@@ -188,8 +203,8 @@ extension TrainViewController: UIGestureRecognizerDelegate{
         let dataIdxLeft = trainTypeOptionIdx.value == 0 ? trainTypeOptionIdx.value : trainTypeOptionIdx.value - 1
         
         if gesture.state == .began{
-            trainingTypeButtonRight = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[dataIdxRight])
-            trainingTypeButtonLeft = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtaptrainType),title:buttonTitle[dataIdxLeft])
+            trainingTypeButtonRight = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtapButton),title:buttonTitle[dataIdxRight])
+            trainingTypeButtonLeft = newButton(frame: self.trainingTypeButton.frame,action: #selector(self.didtapButton),title:buttonTitle[dataIdxLeft])
             trainingTypeButtonLeft.isHidden = dataIdxLeft == trainTypeOptionIdx.value
             trainingTypeButtonRight.isHidden = dataIdxRight == trainTypeOptionIdx.value
             view.addSubview(trainingTypeButtonRight)
