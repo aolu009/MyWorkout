@@ -38,6 +38,10 @@
 		BF9C826E1FE7C031001A3F09 /* AllTrainingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */; };
 		BF9C82711FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C826F1FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift */; };
 		BF9C82721FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9C82701FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib */; };
+		BF9C82751FF37F90001A3F09 /* TrainRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C82731FF37F90001A3F09 /* TrainRecordingViewController.swift */; };
+		BF9C82761FF37F90001A3F09 /* TrainRecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9C82741FF37F90001A3F09 /* TrainRecordingViewController.xib */; };
+		BF9C82781FF38EBC001A3F09 /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9C82771FF38EBC001A3F09 /* PauseButton.png */; };
+		BF9C827A1FF39991001A3F09 /* TrainRecordingPausingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C82791FF39991001A3F09 /* TrainRecordingPausingView.swift */; };
 		BFFBF0C11FD4DEFF009FBFF7 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */; };
 		BFFBF0C21FD4DEFF009FBFF7 /* BodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */; };
 		BFFBF0C61FD4DF2B009FBFF7 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */; };
@@ -108,6 +112,10 @@
 		BF9C826D1FE7C031001A3F09 /* AllTrainingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrainingHistory.swift; sourceTree = "<group>"; };
 		BF9C826F1FEE3B9C001A3F09 /* TrainConfirmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainConfirmDetailViewController.swift; sourceTree = "<group>"; };
 		BF9C82701FEE3B9C001A3F09 /* TrainConfirmDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainConfirmDetailViewController.xib; sourceTree = "<group>"; };
+		BF9C82731FF37F90001A3F09 /* TrainRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainRecordingViewController.swift; sourceTree = "<group>"; };
+		BF9C82741FF37F90001A3F09 /* TrainRecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainRecordingViewController.xib; sourceTree = "<group>"; };
+		BF9C82771FF38EBC001A3F09 /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
+		BF9C82791FF39991001A3F09 /* TrainRecordingPausingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainRecordingPausingView.swift; sourceTree = "<group>"; };
 		BFFBF0BF1FD4DEFF009FBFF7 /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		BFFBF0C01FD4DEFF009FBFF7 /* BodyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyViewController.xib; sourceTree = "<group>"; };
 		BFFBF0C41FD4DF2B009FBFF7 /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +182,9 @@
 				BFFBF0BA1FD3BBCD009FBFF7 /* TrainingContainerView */,
 				BFFBF0BB1FD3BBFE009FBFF7 /* TrainView */,
 				BFFBF0BC1FD3BC44009FBFF7 /* TrainHistoryView */,
+				BF9C82731FF37F90001A3F09 /* TrainRecordingViewController.swift */,
+				BF9C82791FF39991001A3F09 /* TrainRecordingPausingView.swift */,
+				BF9C82741FF37F90001A3F09 /* TrainRecordingViewController.xib */,
 			);
 			path = TrainViews;
 			sourceTree = "<group>";
@@ -182,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2C4DBF1FB70C32004133C2 /* LaunchScreen.png */,
+				BF9C82771FF38EBC001A3F09 /* PauseButton.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -500,7 +512,9 @@
 				BF6973FA1FB05D47005C68A5 /* TrainingContainerViewController.xib in Resources */,
 				BFFBF0CC1FD4DF6F009FBFF7 /* ProfileViewController.xib in Resources */,
 				BF21CF1B1FD02C050070AB89 /* TrainHistoryTableCell.xib in Resources */,
+				BF9C82761FF37F90001A3F09 /* TrainRecordingViewController.xib in Resources */,
 				BFFBF0C71FD4DF2B009FBFF7 /* SleepViewController.xib in Resources */,
+				BF9C82781FF38EBC001A3F09 /* PauseButton.png in Resources */,
 				BFFBF0D11FD53A5A009FBFF7 /* PersonalBestViewController.xib in Resources */,
 				BF84963C1FAC339C00487F45 /* GoogleService-Info.plist in Resources */,
 				BF2C4DBA1FB70A5B004133C2 /* Assets.xcassets in Resources */,
@@ -605,9 +619,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9C827A1FF39991001A3F09 /* TrainRecordingPausingView.swift in Sources */,
 				BF55CCEC1FACB1B900F14E7C /* LoginViewModel.swift in Sources */,
 				BF55CCEA1FAC628600F14E7C /* SignUpViewController.swift in Sources */,
 				BF9C826E1FE7C031001A3F09 /* AllTrainingHistory.swift in Sources */,
+				BF9C82751FF37F90001A3F09 /* TrainRecordingViewController.swift in Sources */,
 				BF21CF1F1FD13FB30070AB89 /* TrainHistoryTableHeaderView.swift in Sources */,
 				BF3B66A01FB995EF00249D4D /* TrainHistroyViewModel.swift in Sources */,
 				BFFCE1591FE2454A0072C04E /* Keys.swift in Sources */,

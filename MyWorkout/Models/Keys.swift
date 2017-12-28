@@ -8,5 +8,12 @@
 
 struct keys{
     static let key = keys()
-    let test = "test"
+    struct buttonTitle{
+        static let addNew = "+"
+        static let start = "Start"
+    }
+    
+    struct chartLabel{
+        
+    }
 }

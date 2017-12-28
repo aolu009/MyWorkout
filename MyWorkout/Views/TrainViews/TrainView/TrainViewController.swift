@@ -54,11 +54,6 @@ class TrainViewController: UIViewController {
         
     }
     
-    @IBAction func didTapAddExercise(_ sender: Any) {
-        // Present exercisePickerViewController
-        presentExercisePickerViewController()
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         //TODO: Do it with NSCoder
         super.init(coder: aDecoder)
@@ -149,19 +144,14 @@ private extension TrainViewController{
      To confirm train type and its correspond detail and start
     */
     @objc func didtapButton(button: UIButton){
+        guard let buttonTitle = button.currentTitle else{
+            print("Something went wrong after button pressed")
+            return
+        }
         delegate?.didTapOnButton(button: button)
-        print("train type: \(String(describing: button.currentTitle))")
+        print("TrainViewController: Start: \(buttonTitle) training!")
     }
-    /**
-     Add an exercise to queue
-    */
-    func presentExercisePickerViewController(){
-        //        var phototaker: exercisePickerViewController?
-        //        exercisePickerViewController = exercisePickerViewController(nibName: "exercisePickerViewController", bundle: nil)
-        //        exercisePickerViewController?.view.frame = self.view.bounds
-        //        let vc = exercisePickerViewController as? UIViewController
-        //        present(vc, animated: true, completion: nil)
-    }
+    
 }
 
 

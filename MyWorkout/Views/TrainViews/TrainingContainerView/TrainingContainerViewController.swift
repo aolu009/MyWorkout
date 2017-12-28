@@ -204,6 +204,13 @@ private extension TrainingContainerViewController{
         }
         
     }
+    func didTapStartTraining(){
+        //present
+        let traingRecordingVC = TrainRecordingViewController()
+        present(traingRecordingVC, animated: true) {
+            print("TrainingContainerViewController: Presenting TrainingContainerViewController")
+        }
+    }
 }
 
 extension TrainingContainerViewController: UIGestureRecognizerDelegate{
@@ -243,14 +250,45 @@ extension TrainingContainerViewController: TrainHistoryViewControllerDelegate{
 
 extension TrainingContainerViewController: TrainViewControllerDelegate{
     func didTapOnButton(button: UIButton) {
-        
-        let confirmDatailViewController = TrainConfirmDetailViewController()
-        confirmDatailViewController.modalPresentationStyle = .overFullScreen
-        present(confirmDatailViewController, animated: true, completion: {
-            confirmDatailViewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        })
+        guard let buttonTitle = button.titleLabel?.text else{
+                print("Something went wrong after button pressed")
+                return
+        }
+        switch buttonTitle {
+        case keys.buttonTitle.start:
+            didTapStartTraining()
+        case keys.buttonTitle.addNew:
+            presentExercisePickerViewController()
+        default:
+            let confirmDatailViewController = TrainConfirmDetailViewController()
+            confirmDatailViewController.modalPresentationStyle = .overFullScreen
+            confirmDatailViewController.delegate = self
+            present(confirmDatailViewController, animated: true, completion: {
+                confirmDatailViewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            })
+        }
     }
     
+    /**
+     Add an exercise to queue
+     */
+    func presentExercisePickerViewController(){
+        print("TrainingContainerViewController: AddNew Exercise Button Tapped")
+        //        var phototaker: exercisePickerViewController?
+        //        exercisePickerViewController = exercisePickerViewController(nibName: "exercisePickerViewController", bundle: nil)
+        //        exercisePickerViewController?.view.frame = self.view.bounds
+        //        let vc = exercisePickerViewController as? UIViewController
+        //        present(vc, animated: true, completion: nil)
+    }
     
 }
-
+extension TrainingContainerViewController: TrainConfirmDetailViewControllerDelegate{
+    func didtapStartButton() {
+        print("TrainingContainerViewController: Start Button Tapped")
+        didTapStartTraining()
+    }
+    
+    func didSelectOnTableViewCell() {
+        print("TrainingContainerViewController: Cell Tapped")
+    }
+}
