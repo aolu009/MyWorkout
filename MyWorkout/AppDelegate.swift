@@ -1,10 +1,51 @@
-//
 //  AppDelegate.swift
 //  MyWorkout
 //
 //  Created by Lu Ao on 11/3/17.
 //  Copyright © 2017 Lu Ao. All rights reserved.
-// TODO: Clean up code for initiating VC
+//====================================================================================
+/*
+ * TODO: Clean up code (Top Priority, finish before starting developing anything else)
+ *       |__Documentation for all files under MyWorkout
+ *          |__Develope documentation style
+ *          |__Documentation syntax for better link/look-up
+ *       |__Create a sepatate file for TODO summary(Optional)
+ *       |__Create overview file for the app topolog and details...etc
+ *       |__Clean Ups
+ *          |__Adjust UI codes to see if it can be adapted to all size of devices
+ *              |__Replace as many IB constraints with codes as possible
+ *              |__Develope constratints code with higher matainability.(Safe area....)
+ *          |__Study NSCoder for initiate views/xibs:
+ *          |__Clean up warnings for library files, if possible.
+ *       |__Learn about new changes regarding Swift4
+ * TODO: Develope Reactive(possible solutions: all delegate?? pretocols??)
+ *       |__Study Reactive CoCoa/Swift
+ *          |__Clean up warning, if possible(via workarounds)
+ *       |__Study how to develope library
+ *       |__Develope reactive independently
+ * TODO: Pending functions:
+ *       |__LaunchingScreen: Make it animated/video
+ *       |__Logins:
+ *          |__Muti-User Login:
+ *             |__Keep lists of user logged in before
+ *             |__Use gesture to remove unwanted
+ *          |__FaceID login
+ *       |__Sleep tracking:
+ *       |__Profiles:
+ *       |__Body???:
+ * TODO: Possible feature:
+ *       |__Diet tracking(with cal/food type??)
+ *       |__Shape tracking
+ *       |__Social Media
+ *       |__Track bode composition with OMRON(?) Scale, if provided that it has releasing for developer
+ *       |__Funtional trainging progress/result tracking(vertical leap, sprint velocity....etc)
+ * TODO: Develope template objects(App object/customize objects)
+ * TODO: Adapt cool C/C++ library
+ * TODO: Backend node.js management
+ *       |__google server
+ *       |__AWS
+ */
+//====================================================================================
 
 import UIKit
 import FirebaseCore
