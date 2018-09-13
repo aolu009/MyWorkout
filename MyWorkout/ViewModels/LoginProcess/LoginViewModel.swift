@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import ReactiveCocoa
 import ReactiveSwift
 
 struct LoginViewModel{
