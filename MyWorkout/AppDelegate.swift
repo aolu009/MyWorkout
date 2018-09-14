@@ -94,9 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Auth.auth().currentUser != nil{
             
             let vc0 = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil) as UIViewController
-            let vc1 = BodyViewController(nibName: "BodyViewController", bundle: nil) as UIViewController
-            let vc2 = SleepViewController(nibName: "SleepViewController", bundle: nil) as UIViewController
-            let vc3 = ProfileViewController(nibName: "ProfileViewController", bundle: nil) as UIViewController
+            let vc1 = BodyViewController        (nibName: "BodyViewController"        , bundle: nil) as UIViewController
+            let vc2 = SleepViewController       (nibName: "SleepViewController"       , bundle: nil) as UIViewController
+            let vc3 = ProfileViewController     (nibName: "ProfileViewController"     , bundle: nil) as UIViewController
             
             let vc = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
             vc.viewControllers = [vc0,vc1,vc2,vc3]
