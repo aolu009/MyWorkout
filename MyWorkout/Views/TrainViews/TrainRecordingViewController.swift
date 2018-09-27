@@ -93,7 +93,7 @@ private extension TrainRecordingViewController{
     }
     
     func setupPauseButton(){
-        let frame = CGRect(x: view.bounds.width/2 - 45, y: view.bounds.height - 100, width: 90, height: 90)
+        let frame = CGRect(x: self.view.bounds.width/2 - 45, y: self.view.frame.height, width: 90, height: 90)
         pauseButton = UIButton(type: .custom)
         pauseButton.frame = frame
         
@@ -126,7 +126,7 @@ private extension TrainRecordingViewController{
         }) { (done) in
             if button.tag == 0{
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.pauseButton.frame = CGRect(x: self.view.bounds.width/2 - 45, y: self.view.bounds.height - 100, width: 90, height: 90)
+                    self.pauseButton.frame = CGRect(x: self.view.bounds.width/2 - 45, y: self.view.frame.height - 100, width: 90, height: 90)
                 })
             }else{
                 self.dismiss(animated: true) {
@@ -143,7 +143,7 @@ private extension TrainRecordingViewController{
         }) { (done) in
             print("Pause Recording")
             UIView.animate(withDuration: 0.3, animations: {
-                self.pauseView.frame = CGRect(x: 0, y: 2 * self.view.bounds.height/3 - 0.08 * self.view.frame.height, width: self.view.bounds.width, height: self.view.bounds.height/3)
+                self.pauseView.frame = CGRect(x: 0, y: 2 * self.view.bounds.height/3, width: self.view.bounds.width, height: self.view.bounds.height/3)
                 self.pauseView.layoutIfNeeded()
             })
         }

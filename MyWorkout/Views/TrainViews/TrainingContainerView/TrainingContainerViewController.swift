@@ -202,7 +202,6 @@ private extension TrainingContainerViewController{
         }else{
             tabBarView.isHidden = true
         }
-        
     }
     func didTapStartTraining(){
         //present

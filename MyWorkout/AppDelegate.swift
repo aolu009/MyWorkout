@@ -17,6 +17,7 @@
  *              |__Develope constratints code with higher matainability.(Safe area....)
  *          |__Study NSCoder for initiate views/xibs:
  *          |__Clean up warnings for library files, if possible.
+ *          |__Clean up warnings for library files, if possible.
  *       |__Learn about new changes regarding Swift4
  * TODO: Develope Reactive(possible solutions: all delegate?? pretocols??)
  *       |__Study Reactive CoCoa/Swift
@@ -91,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     */
     func launchInitViews(){
         //TODO: Logout.
+        //try! Auth.auth().signOut()
         if Auth.auth().currentUser != nil{
             
             let vc0 = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil) as UIViewController
@@ -115,6 +117,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: frame)
             self.window?.rootViewController = vc as UIViewController
             self.window?.makeKeyAndVisible()
+        }else{
+            print("No User!!")
+            let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
+            
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            
+            
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = loginVC
+            window?.makeKeyAndVisible()
         }
     }
 

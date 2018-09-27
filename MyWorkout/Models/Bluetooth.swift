@@ -97,7 +97,6 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
         if error == nil {
             let data = characteristic.value
             var offset = 0
-            
             let hrFormat = data![0] & 0x01 //                            0000 0001 | 0th bit | UINT8/UINT16 (Beats/mintute) 0,1
             let sensorContactBits = Int((data![0] & 0x06) >> 1) //       0000 0110 | 1st to 2nd bit | Support/Detected      0,1,2,3
             let energyExpended = (data![0] & 0x08) >> 3 //               0000 1000 | 3rd bit | Present kJoules              0,1
@@ -109,15 +108,14 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
             if sensorContactBits == 0 {
                 contactSupported = false
                 sensorContact = true
+                print("Bluetooth: SensorContacted: \(sensorContact)")
             }
-            
-            print("Bluetooth: SensorContacted: \(sensorContact)")
             self.isAvailable.value = true
             let hrValue = hrFormat == 1 ? (Int(data![1]) + (Int(data![2]) << 8)) : Int(data![1]);
             self.heartRate.value = String(hrValue)
             heartRateDouble.value = Double(hrValue)
-            print("Bluetooth: Format: \(hrFormat) = \(Int(hrFormat)) = UINT8")
-            print("Bluetooth: HR_MEASUREMENT: \(hrValue)")
+            //print("Bluetooth: Format: \(hrFormat) = \(Int(hrFormat)) = UINT8")
+            //print("Bluetooth: HR_MEASUREMENT: \(hrValue)")
             
             if contactSupported == false && hrValue == 0 {
                 sensorContact = false
@@ -131,8 +129,8 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
             if (energyExpended == 1) {
                 energy = Int(data![offset]) + (Int(data![offset + 1]) << 8);
                 offset += 2;
+                print("Bluetooth: ENERGY: \(energy) KJ")
             }
-            print("Bluetooth: ENERGY: \(energy) KJ")
             
             var rrs = [Int]()
             if( rrPresent == 1 ){
@@ -143,7 +141,7 @@ class Bluetooth: NSObject,CBCentralManagerDelegate, CBPeripheralDelegate {
                     offset += 2;
                     rrs.append(rrValue);
                 }
-                print("Bluetooth: RRS: \(rrs[0])")
+                //print("Bluetooth: RRS: \(rrs[0])")
             }
         }
     }

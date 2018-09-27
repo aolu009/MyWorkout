@@ -109,7 +109,7 @@ private extension TrainViewController{
     }
     
     func setupButtons(){
-        print("TrainViewController: Setting Up buttons")
+        //print("TrainViewController: Setting Up buttons")
         //Setup Training Type Button
         trainingTypeButtonMidCenter = view.center
         trainingTypeButtonLeftCenter = CGPoint(x: -self.view.frame.width/2, y: view.center.y)

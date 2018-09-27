@@ -59,16 +59,42 @@ class LoginViewController: UIViewController {
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        let mainTabViewController = storyboard.instantiateViewController(withIdentifier: "MainTabViewController") as! UITabBarController
         
-        let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
-        vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
-        vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
+        //let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
+        //vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+        //vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
         
-        present(vc1, animated: true, completion: nil)
+        
+        
+        let vc0 = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil) as UIViewController
+        let vc1 = BodyViewController        (nibName: "BodyViewController"        , bundle: nil) as UIViewController
+        let vc2 = SleepViewController       (nibName: "SleepViewController"       , bundle: nil) as UIViewController
+        let vc3 = ProfileViewController     (nibName: "ProfileViewController"     , bundle: nil) as UIViewController
+        
+        let vc = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
+        vc.viewControllers = [vc0,vc1,vc2,vc3]
+        
+        let historyViewController = vc.viewControllers[0] as! TrainHistoryViewController
+        historyViewController.delegate = vc
+        
+        let trainViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+        trainViewController.delegate = vc
+        
+        vc.containerViewController = trainViewController
+        vc.lowerContainerViewController = historyViewController
+        
+        // TODO: Check if below needs to be deleted.
+//        let frame = UIScreen.main.bounds
+//        self.window = UIWindow(frame: frame)
+//        self.window?.rootViewController = vc as UIViewController
+//        self.window?.makeKeyAndVisible()
+        
+        present(vc, animated: true, completion: nil)
+        
     }
     
     fileprivate func setupBinding(){
         
-        emailTextfield.becomeFirstResponder()
+        //emailTextfield.becomeFirstResponder()
         
         viewModel.signedIn.producer.startWithValues { (goToMainView) in
             guard goToMainView else {self.presentLoginFail(); return}
