@@ -87,12 +87,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
     /**
-     Launching Home view if there is already a logged in user, else present login/sign_up view
+     If there is already a logged in user, launch Home view.
+     Else                                  launch login/sign_up view.
+     - parameter none:  This is documentation example
+     - parameter none2: For the etire code for reference.
     */
-    func launchInitViews(){
+    func launchInitViews( none: String? = nil, none2: String? = nil){
         //TODO: Logout.
         //try! Auth.auth().signOut()
+        //WHen there is already a logged in user, present home view.
         if Auth.auth().currentUser != nil{
             
             let vc0 = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil) as UIViewController
@@ -103,10 +108,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
             vc.viewControllers = [vc0,vc1,vc2,vc3]
             
-            let historyViewController = vc.viewControllers[0] as! TrainHistoryViewController
+            let historyViewController      = vc.viewControllers[0] as! TrainHistoryViewController
             historyViewController.delegate = vc
             
-            let trainViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
+            let trainViewController      = TrainViewController(nibName: "TrainViewController", bundle: nil)
             trainViewController.delegate = vc
             
             vc.containerViewController = trainViewController
@@ -117,12 +122,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: frame)
             self.window?.rootViewController = vc as UIViewController
             self.window?.makeKeyAndVisible()
-        }else{
-            print("No User!!")
+        }else{//When there is no logged in user, present login view to ask user to login.
+            
             let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
-            
-            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            
+            let loginVC    = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = loginVC

@@ -23,15 +23,12 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupBinding()
     }
-    
-    
+    //When User pressed login button
     @IBAction func onLogin(_ sender: Any) {
         // Start login process
         login = viewModel.signingIn
     }
-    
-    
-
+    //When user pressed signup button
     @IBAction func onSignUp(_ sender: Any) {
         // Present SignUpViewController
         signUp()
@@ -56,14 +53,6 @@ class LoginViewController: UIViewController {
      Present MainTabViewController
      */
     fileprivate func goToMainTabView(){
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let mainTabViewController = storyboard.instantiateViewController(withIdentifier: "MainTabViewController") as! UITabBarController
-        
-        //let vc1 = TrainingContainerViewController(nibName: "TrainingContainerViewController", bundle: nil)
-        //vc1.containerViewController = TrainViewController(nibName: "TrainViewController", bundle: nil)
-        //vc1.lowerContainerViewController = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil)
-        
-        
         
         let vc0 = TrainHistoryViewController(nibName: "TrainHistoryViewController", bundle: nil) as UIViewController
         let vc1 = BodyViewController        (nibName: "BodyViewController"        , bundle: nil) as UIViewController
@@ -81,12 +70,6 @@ class LoginViewController: UIViewController {
         
         vc.containerViewController = trainViewController
         vc.lowerContainerViewController = historyViewController
-        
-        // TODO: Check if below needs to be deleted.
-//        let frame = UIScreen.main.bounds
-//        self.window = UIWindow(frame: frame)
-//        self.window?.rootViewController = vc as UIViewController
-//        self.window?.makeKeyAndVisible()
         
         present(vc, animated: true, completion: nil)
         
